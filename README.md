@@ -7,7 +7,7 @@
 |--------|------|
 |  20190796  | Tomás Bourdain da Gama |
 |  20190848  | João Ricardo Belo |
-|  20190812  | João Pedro André |
+|  50039634  | João Afonso Águas |
 
 
 ## Enquadramento
