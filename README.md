@@ -27,7 +27,7 @@ Deste modo, os fatores críticos para o sucesso da nossa aplicação serão: Fid
 
 ## Casos de utilização: 
 
-### Consultar lista
+### Consultar Catálogo de Eventos
 **Descrição:** 
 \
 
@@ -41,7 +41,7 @@ Deste modo, os fatores críticos para o sucesso da nossa aplicação serão: Fid
 
 
 
-### Use Case
+### Escolher Evento
 **Descrição:** 
 
 
@@ -55,7 +55,7 @@ Deste modo, os fatores críticos para o sucesso da nossa aplicação serão: Fid
 
 
 
-### Pesquisar Ciclovias 
+### Avaliar Evento
 **Descrição:** \
 
 **Pré-condições:**
@@ -68,7 +68,7 @@ Deste modo, os fatores críticos para o sucesso da nossa aplicação serão: Fid
 
 
 
-### Use Case
+### Pesquisar Evento por Distrito 
 **Descrição:** \
 
 
@@ -83,7 +83,7 @@ Deste modo, os fatores críticos para o sucesso da nossa aplicação serão: Fid
 
 
 
-### Use Case
+### Pesquisar Evento por Categoria 
 **Descrição:** \
 
 
@@ -97,7 +97,7 @@ Deste modo, os fatores críticos para o sucesso da nossa aplicação serão: Fid
 
 
 
-### Use Case
+### Consultar Lista de Participantes (Gestor de Eventos) 
 **Descrição:** \
 
 
