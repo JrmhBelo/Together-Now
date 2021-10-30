@@ -1,13 +1,12 @@
 
-drop database  if exists togetherNow;
+drop database  if exists TogetherNow;
 
-create database togetherNow;
+create database TogetherNow;
 
-use togetherNow;
 
 
 create table utilizador(
-uti_ID int auto_increment,
+uti_ID serial,
 uti_nomeP varchar(30),
 uti_nomeU varchar(30),
 uti_email varchar(50),
@@ -19,27 +18,31 @@ primary key (uti_ID)
 );
 
 create table gestorEvento(
-ges_ID int auto_increment,
+ges_ID serial,
 ges_nomeP varchar(30),
 ges_nomeU varchar(30),
 ges_email varchar(50),
 ges_telemovel varchar(9),
 ges_nascimento date,
+ges_idade int,
 ges_organizacao varchar(30),
 primary key (ges_ID)
 );
 
 create table evento(
-eve_ID int auto_increment,
+eve_ID serial,
 eve_data date,
-eve_dataI datetime,
-eve_dataF datetime,
-eve_localizacao varchar(50),
+eve_dataI time,
+eve_dataF time,
+eve_morada varchar(50),
 eve_maxParticipantes int,
 eve_lati float,
 eve_long float,
 eve_nome varchar(50),
 eve_descricao varchar(100),
+eve_beneficiario varchar(50),
+eve_estado varchar(20),
+eve_categ varchar(20),
 ges_ID int,
 primary key (eve_id),
 foreign key (ges_ID) references gestorEvento (ges_ID)
