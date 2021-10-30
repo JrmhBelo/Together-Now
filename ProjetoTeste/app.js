@@ -16,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/utilizadores', utilizadorRouter);
 app.use('/api/eventos', eventoRouter);
+app.use('/api/eventos/:id', eventoRouter);
 
 module.exports = app;
 

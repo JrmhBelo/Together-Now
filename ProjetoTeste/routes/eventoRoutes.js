@@ -8,12 +8,12 @@ router.get('/', async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id/', async function(req, res, next) {
+router.get('/:id', async function(req, res, next) {
     let id = req.params.id;
-	console.log ("Enviando evento com id " + id);
-    let result = await eModel.getEventoById(pos); 
+    console.log("Sending Evento with id "+id);
+    let result = await eModel.getEventoById(id);
     res.status(result.status).send(result.result);
-});
+  });
 
 
 module.exports = router;
