@@ -1,8 +1,9 @@
 window.onload = async function() {
-    let elem = document.getElementById("eventos");
+    let elem = document.getElementById("eventosGestao");
     try {
+        gesId = 1;
         let eventos = await $.ajax({
-        url: "/api/eventos",
+        url: "/api/eventos/"+gesId+"/gestor", //mudar 1 para gesId quando tiver login para gestor de eventos
         method: "get",
         dataType: "json"
         });
@@ -18,6 +19,5 @@ window.onload = async function() {
 }
 function showEvento(id) {
     sessionStorage.setItem("eventoId",id);
-    window.location = "evento.html";
+    window.location = "eventoGestao.html";
 }
-

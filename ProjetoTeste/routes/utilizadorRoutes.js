@@ -15,4 +15,17 @@ router.get('/:id/', async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
+router.post('/login',async function(req, res, next) {
+    let email = req.body.email;
+    let password = req.body.pass;
+    let result = await uModel.loginUtilizador(email,password);
+    res.status(result.status).send(result.result);
+});
+
+router.get('/:id/eventos',async function(req, res, next) {
+    let utiId = req.params.id;
+    let result = await uModel.getUtilizadorEventos(utiId);
+    res.status(result.status).send(result.result);
+});
+
 module.exports = router;

@@ -1,21 +1,41 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> TogetherNow </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Together Now </title>
+        <link rel="stylesheet" href="stylesheets/evento.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
         <script src="javascripts/evento.js"></script>
     </head>
-        <header id="eventos">  </header>       
-        <main>
-        <h2>Evento <span id="evento"> </span></h2>
-        <h4>Nome <span id="nome"> </span></h4>
-        <h4>Descrição <span id="descricao"> </span></h4>
+    <body>
+        <section>
+            <header>
+              <h2><a href="index.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
+              <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="catalogoEventos.html">Catálogo de Eventos</a>
+                <a href="utilizadorProfile.html">Perfil</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="utiLogin.html">Login/Sign Up</a>
+              </div>
+            </header>
+        </section>
+        <div class="content">   
+        <div class="info"> 
+        <h2>Evento <span id="nome"> </span></h2>
+        <h3> <span id="descricao"> </span></h3>
         <!--h4>Data <span id="data"> </span></h4>
         <h4>Hora de Inicio <span id="horaF"> </span></h4>
         <h4>Hora de Fim <span id="horaF"> </span></h4>
         <h4>Máximo de Participantes <span id="maxPart"> </span></h4>
         <h4>Beneficiário <span id="beneficiario"> </span></h4>
         <h4>Estado <span id="estado"> </span></h4>
-        <h4>Categoria <span id="categoria"> </span></h4 !-->
-        </main> 
+        <h4>Categoria <span id="categoria"> </span></h4!-->
+        </div> 
+        <a href="formularioRegisto.html">
+            <input type="button" value="Registar-se" class="info-btn" />
+        </a>
 </html>

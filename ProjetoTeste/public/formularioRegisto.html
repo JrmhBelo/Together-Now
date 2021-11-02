@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Together Now </title>
+        <link rel="stylesheet" href="stylesheets/formularioRegisto.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <script src="javascripts/formularioRegisto.js"></script>
+    </head>
+    <body> 
+        <section>
+            <header>
+              <h2><a href="index.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
+              <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="catalogoEventos.html">Catálogo de Eventos</a>
+                <a href="utilizadorProfile.html">Perfil</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="utiLogin.html">Login/Sign Up</a>
+              </div>
+            </header> 
+        <div class="content">
+            <div class="info">
+                <h2>Formulário de Participação <br><span>Complete as suas informações</span></h2>
+            </div>
+        <form>
+
+            <fieldset class="grupo">
+
+                <div class="campo">
+                    <br>
+                    <label for="cidade"><strong>Cidade: </strong></label>
+                    <select id="cidade">
+                      <option selected disabled value="">Selecione</option>
+                      <option>Lisboa</option>
+                      <option>Porto</option>
+                      <option>Braga</option>
+                      <option>Aveiro</option>
+                      <option>Évora</option>
+                      <option>Guimarães</option>
+                      <option>Faro</option>
+                      <option>Leiria</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="concelho"><strong>Concelho: </strong></label>
+                    <input type="text" name="concelho" id="concelho" placeholder="Insira o seu concelho (ex: Odivelas)" size="40">
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="Morada"><strong>Morada: </strong></label>
+                    <input type="text" name="morada" id="morada" placeholder="Insira a sua morada (ex: Rua IADE)" size="40">
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label><strong>Estado Civil: </strong></label>
+                    <label>
+                        <input type="radio" name="escivil" value="solteiro"> Solteiro
+                    </label>
+                    <label>
+                        <input type="radio" name="escivil" value="casado"> Casado
+                    </label>
+                    <label>
+                        <input type="radio" name="escivil" value="divorciado"> Divorciado
+                    </label>
+                    <label>
+                        <input type="radio" name="escivil" value="viuvo"> Viúvo
+                    </label>
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="escolaridade"><strong>Escolaridade: </strong></label>
+                    <select id="escolaridade">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Ensino Básico</option>
+                    <option>Ensino Secundário</option>
+                    <option>Ensino Superior</option>
+                    <option>Licenciatura</option>
+                    <option>Mestrado</option>
+                    <option>Doutoramento</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="sitEmprego"><strong>Em que situação atual de emprego se encontra: </strong></label>
+                    <select id="sitEmprego">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Empregado</option>
+                    <option>Independente</option>
+                    <option>Desempregado</option>
+                    <option>Estudante</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="profissao"><strong>Profissão: </strong></label>
+                    <input type="text" name="profissao" id="profissao" placeholder="Insira a sua profissão (ex: Contabilista)" size="40">
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="motivacao"><strong>Motivo de Participação: </strong></label>
+                    <br>   
+                    <textarea rows="6" style="width: 29em" id="motivacao" name="motivacao" placeholder="Insira sua mensagem"></textarea>
+                </div>
+
+            <br>
+            <a href="CatalogoEventos.html">
+            <input type="submit" value="Concluído" onclick="" class="info-btn"> 
+            </a>
+        </form>
+        </div>
+    </body>
+
+</html>

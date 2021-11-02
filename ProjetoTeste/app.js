@@ -14,9 +14,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/utilizadores', utilizadorRouter);
+app.use('/api/utilizador', utilizadorRouter);
 app.use('/api/eventos', eventoRouter);
-app.use('/api/eventos/:id', eventoRouter);
 
 module.exports = app;
 

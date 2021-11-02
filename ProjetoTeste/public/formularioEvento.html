@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Together Now </title>
+        <link rel="stylesheet" href="stylesheets/formularioEvento.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <script src="javascripts/formularioEvento.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    </head>
+    <body> 
+        <section>
+            <header>
+              <h2><a href="index.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
+              <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="catalogoEventos.html">Catálogo de Eventos</a>
+                <a href="utilizadorProfile.html">Perfil</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="utiLogin.html">Login/Sign Up</a>
+              </div>
+            </header> 
+        <div class="content">
+            <div class="info">
+                <h2>Formulário de Participação <br><span>Complete as informações do Evento</span></h2>
+            </div>
+        <form>
+            <fieldset class="grupo">
+        <div class="grid-container">
+            <div class="item1">
+                <div class="campo">
+                    <br>
+                    <label for="nome"><strong>Nome do Evento: </strong></label>
+                    <input type="text" name="nome" id="nome" placeholder=" Insira o nome do Evento" size="40">
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="beneficiario"><strong>Beneficiário: </strong></label>
+                    <input type="text" name="beneficiario" id="beneficiario" placeholder=" Insira o Beneficiário" size="40">
+            </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="descricao"><strong>Descrição: </strong></label>
+                    <br>   
+                    <textarea rows="6" style="width: 29em" id="descricao" name="descricao" placeholder=" Insira a descrição do Evento"></textarea>
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="data"><strong>Data do Evento: </strong></label>
+                    <input type="date" name="data" id="data">
+                </div>
+
+                <div class="campo">
+                    <br>
+                    <label for="dataI"><strong>Hora de Início: </strong></label>
+                    <input type="time" name="dataI" id="dataI">
+                    <label for="dataF"><strong>Hora de Fim: </strong></label>
+                    <input type="time" name="dataF" id="dataF">
+                </div>
+    
+            <div class="campo">
+                <br>
+                <label for="categoria"><strong>Categoria: </strong></label>
+                <select id="categoria">
+                  <option selected disabled value="">Selecione</option>
+                  <option>Interior</option>
+                  <option>Exterior</option>
+                </select>
+                <label for="maxPart"><strong>Máximo de Participantes: </strong></label>
+                <input type="number" name="maxPart" id="maxPart" placeholder=" Insira um número" size="40">
+            </div>
+            </div>
+            <div class="item2">
+                <div class="campo">
+                    <br>
+                    <label for="morada"><strong>Morada: </strong></label>
+                    <input type="text" name="morada" id="morada" placeholder=" Insira a Morada do Evento" size="70">
+            </div>
+                <div class="campo">
+                    <br>
+                <label for="mapa"><strong>Mapa: </strong></label>
+        </div>
+            <main>
+                <section id="mapid"></section>
+                <div class="campo">
+                <p>
+                <strong>Latitude: <span id="latitude"></span>&deg;</strong><br />
+                <strong>Longitude: <span id="latitude"></span>&deg;</strong>
+                </p>
+                </div>
+            </main>
+             
+            </div>
+        </fieldset>
+            <a href="gestaoEventos.html">
+            <input type="submit" value="Concluído" onclick="criar()" class="info-btn" > 
+            </a>
+        </div>
+    </div>
+    
+        </form>
+
+    </body>
+
+</html>
