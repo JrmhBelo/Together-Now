@@ -12,16 +12,16 @@ INSERT INTO public.gestorevento(
 
 INSERT INTO public.evento(
 	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_estado, eve_categ, ges_id)
-	VALUES ('Recolha de lixo à beira da estrada N2', 'Evento solidário', 'Alabasta Foundation', '2021-12-27', '2021-12-27', 14:00, 21:00, 'N2 40 3460, Vila de Rei, Portugal', 39.678956, -8.142297, 'Exterior', 3);
+	VALUES ('Recolha de lixo à beira da estrada N2', 'Evento solidário', 'Alabasta Foundation', '2021-12-27', '2021-12-27', '14:00', '21:00', 'N2 40 3460, Vila de Rei, Portugal', 8,39.678956, -8.142297, null,'Exterior', 3);
 
 INSERT INTO public.evento(
 	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_estado, eve_categ, ges_id)
-	VALUES ('Baby babysitting solidário em noite de São Valentim', 'Evento solidário', 'Alabasta Foundation', '2022-02-14', '2021-12-15', 20:00, 00:30, 'Av. Manuel da Maia 36, 1049-001 Lisboa, Portugal', 38.736923, -9.136625, 'Interior', 3);
-	
-INSERT INTO public.regista(
-	reg_data, reg_prof, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
-	VALUES (2021-11-29, 'Médica', 'Mestrado', 'Lisboa', 'Enriquecimento Curricular', 'Solteira', 'Empregado', 3, 3);
+	VALUES ('Babybabysitting solidário em noite de São Valentim', 'Evento solidário', 'Alabasta Foundation', '2022-02-14', '2021-12-15', '20:00', '00:30', 'Av. Manuel da Maia 36, 1049-001 Lisboa, Portugal',7, 38.736923, -9.136625,null, 'Interior', 3);
 
 INSERT INTO public.regista(
 	reg_data, reg_prof, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
-	VALUES (2022-01-22, 'Engenheiro Cívil', 'Licenciatura', 'Castelo Branco', 'Experienciar algo diferente', 'Casado', 'Empregado', 4, 4);
+	VALUES ('2021-11-29', 'Médica', 'Mestrado', 'Lisboa', 'Enriquecimento Curricular', 'Solteira', 'Empregado', 3, 3);
+
+INSERT INTO public.regista(
+	reg_data, reg_prof, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
+	VALUES ('2022-01-22', 'Engenheiro Cívil', 'Licenciatura', 'Castelo Branco', 'Experienciar algo diferente', 'Casado', 'Empregado', 4, 4);

@@ -29,7 +29,7 @@ CREATE TABLE gestorEvento(
 
 CREATE TABLE evento(
 	eve_ID serial,
-	eve_nome varchar(50),
+	eve_nome varchar(100),
 	eve_descricao varchar(100),
 	eve_beneficiario varchar(50),
 	eve_dataI date,
