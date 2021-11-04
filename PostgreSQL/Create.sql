@@ -1,8 +1,6 @@
 
 DROP DATABASE IF EXISTS TogetherNow;
 
-CREATE DATABASE TogetherNow;
-
 CREATE TABLE utilizador(
 	uti_ID serial,
 	uti_nomeP varchar(30),
@@ -38,7 +36,7 @@ CREATE TABLE evento(
 	eve_dataF date,
 	eve_horaI time,
 	eve_horaF time,
-	eve_morada varchar(50),
+	eve_morada varchar(240),
 	eve_maxParticipantes int,
 	eve_lati float,
 	eve_lon float,
