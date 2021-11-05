@@ -1,6 +1,6 @@
 var pg = require('pg');
 
-const connectionString = "postgres://postgres:root@localhost:5432/togethernow"
+const connectionString = "postgres://postgres:banana@localhost:5432/togethernow"
 const Pool = pg.Pool
 const pool = new Pool({
     connectionString,
