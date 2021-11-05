@@ -83,7 +83,6 @@ header .navigation a:hover{
     border-radius: 5px;
     transition: 0.3s;
     transition-property: background;
-    margin-left: 1500px;
 }
   
 .content .info-btn:hover{
