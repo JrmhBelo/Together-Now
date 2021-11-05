@@ -44,7 +44,6 @@ CREATE TABLE evento(
 	eve_lon float,
 	eve_estado varchar(20) DEFAULT 'Iniciado',
 	eve_categ varchar(20),
-	eve_criacao date,
 	ges_ID int,
 	PRIMARY KEY (eve_id),
 	FOREIGN KEY (ges_ID) REFERENCES gestorEvento (ges_ID)
