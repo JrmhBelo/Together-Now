@@ -11,6 +11,7 @@ CREATE TABLE utilizador(
 	uti_nascimento date,
 	uti_idade int,
 	uti_totalP int,
+	uti_genero char(1),
 	PRIMARY KEY (uti_ID)
 );
 
@@ -24,6 +25,7 @@ CREATE TABLE gestorEvento(
 	ges_nascimento date,
 	ges_idade int,
 	ges_organizacao varchar(30),
+	ges_genero char(1),
 	PRIMARY KEY (ges_ID)
 );
 
@@ -42,6 +44,7 @@ CREATE TABLE evento(
 	eve_lon float,
 	eve_estado varchar(20) DEFAULT 'Iniciado',
 	eve_categ varchar(20),
+	eve_criacao date,
 	ges_ID int,
 	PRIMARY KEY (eve_id),
 	FOREIGN KEY (ges_ID) REFERENCES gestorEvento (ges_ID)
@@ -72,3 +75,18 @@ CREATE TABLE participa (
 	FOREIGN KEY (eve_ID) REFERENCES Evento (eve_ID),
 	FOREIGN KEY (uti_ID) REFERENCES Utilizador (uti_ID)
 )
+
+
+create table cria(
+	cria_data date,
+	ges_ID int,
+	eve_ID int,
+	PRIMARY KEY (ges_id,eve_id),
+	FOREIGN KEY (eve_id) REFERENCES Evento (eve_ID),
+	FOREIGN KEY (ges_id) REFERENCES gestorevento (ges_id)
+)
+	
+
+
+
+
