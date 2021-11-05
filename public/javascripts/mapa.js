@@ -22,7 +22,7 @@ window.onload = async function () {
 
     for (let evento of eventos) 
         if (evento.eve_lati) {
-            var marker = L.marker([evento.eve_lati, evento.eve_long]).addTo(mymap);
+            var marker = L.marker([evento.eve_lati, evento.eve_lon]).addTo(mymap);
             eventos.push({evento: evento, marker: marker});
             evento.marker = marker;   
         }
