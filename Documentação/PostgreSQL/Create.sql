@@ -1,5 +1,5 @@
 
-DROP DATABASE IF EXISTS TogetherNow;
+
 
 CREATE TABLE utilizador(
 	uti_ID serial,
