@@ -22,7 +22,14 @@ INSERT INTO public.utilizador(
 INSERT INTO public.utilizador(
 	uti_nomep, uti_nomeu, uti_email, uti_pass, uti_telemovel, uti_nascimento, uti_idade, uti_totalp)
 	VALUES ('Bernardo', 'Ribeiro', 'bernardorib@gmail.com', '121212', '987967976', '1980-02-02', 41, 0);
-		
+
+INSERT INTO public.utilizador(
+	uti_nomep, uti_nomeu, uti_email, uti_pass, uti_telemovel, uti_nascimento, uti_idade, uti_totalp)
+	VALUES ('Carolina', 'Antunes', 'carolantunes@gmail.com', '364573', '910345672', '2001-03-09', 20, 0);
+
+INSERT INTO public.utilizador(
+	uti_nomep, uti_nomeu, uti_email, uti_pass, uti_telemovel, uti_nascimento, uti_idade, uti_totalp)
+	VALUES ('Rodrigo', 'Calixto', 'calix123456789@gmail.com', '200034', '960453777', '1970-10-12', 51, 0);		
 --------------
 INSERT INTO public.gestorevento(
 	ges_nomep, ges_nomeu, ges_email, ges_pass, ges_telemovel, ges_nascimento, ges_idade, ges_organizacao)
@@ -35,6 +42,10 @@ INSERT INTO public.gestorevento(
 INSERT INTO public.gestorevento(
 	ges_nomep, ges_nomeu, ges_email, ges_pass, ges_telemovel, ges_nascimento, ges_idade, ges_organizacao)
 	VALUES ( 'Tomás', 'Joaquim', 'tomasjoa@gmail.com', '987654321', '975579931', '2000-09-22', 21, 'Oceano Azul Foundation');
+
+INSERT INTO public.gestorevento(
+	ges_nomep, ges_nomeu, ges_email, ges_pass, ges_telemovel, ges_nascimento, ges_idade, ges_organizacao)
+	VALUES ( 'Pedro', 'Porro', 'pporro24@gmail.com', '244224434', '913564773', '1995-05-14', 26, 'Alabasta Foundation');
 
 --------------
 INSERT INTO public.evento(
@@ -78,6 +89,13 @@ INSERT INTO public.regista(
 	reg_data, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
 	VALUES ('2021-11-02', 'Ensino Secundário', 'Costa de Caparica', 'Ajudar a comunidade que tanto gosto', 'Solteiro', 'Desempregado', 3, 2);
 
+INSERT INTO public.regista(
+	reg_data, reg_prof, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
+	VALUES ('2021-11-29', 'Médica', 'Mestrado', 'Lisboa', 'Enriquecimento Curricular', 'Solteira', 'Empregado', 3, 1);
+
+INSERT INTO public.regista(
+	reg_data, reg_prof, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
+	VALUES ('2022-01-22', 'Engenheiro Cívil', 'Licenciatura', 'Castelo Branco', 'Experienciar algo diferente', 'Casado', 'Empregado', 4, 4);
 ----
 
 
