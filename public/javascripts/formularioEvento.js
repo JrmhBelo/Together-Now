@@ -21,9 +21,10 @@ async function criar() {
             nomeId: document.getElementById("nome").value,
             beneficiarioId: document.getElementById("beneficiario").value,
             descricaoId: document.getElementById("descricao").value,
-            dataId: document.getElementById("data").value,
             dataIId: document.getElementById("dataI").value,
             dataFId: document.getElementById("dataF").value,
+            horaIId: document.getElementById("horaI").value,
+            horaFId: document.getElementById("horaF").value,
             categoriaId: document.getElementById("categoria").value,
             maxPartId: document.getElementById("maxPart").value,
             //latId: document.getElementById("latitude").value, colocar no Evento Model quando estiver concluido
