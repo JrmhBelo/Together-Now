@@ -45,11 +45,11 @@ INSERT INTO public.evento(
 --------------
 INSERT INTO public.regista(
 	reg_data, reg_prof, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
-	VALUES ('2021-12-11', null, null, 'Cascais', 'Gosto de ajudar a comunidade por não?', null, 'Empregado', 1, 4);
+	VALUES ('2021-12-11', null, null, 'Cascais', 'Gosto de ajudar a comunidade por não?', null, 'Empregado', 13, 4);
 
 INSERT INTO public.regista(
 	reg_data, reg_escol, reg_morada, reg_motiv, reg_civil, reg_empreg, eve_id, uti_id)
-	VALUES ('2021-12-02', 'Ensino Secundário', 'Cascais', 'Gosto de ajudar a comunidade por não?', null, 'Desempregado', 3, 5);
+	VALUES ('2021-12-02', 'Ensino Secundário', 'Cascais', 'Gosto de ajudar a comunidade por não?', null, 'Desempregado', 15, 5);
 	
 	
 	
