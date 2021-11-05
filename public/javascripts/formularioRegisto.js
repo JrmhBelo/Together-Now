@@ -10,9 +10,8 @@ async function registar() {
         sitEmpregoId: document.getElementById("sitEmprego").value,
         profissaoId: document.getElementById("profissao").value,
         motivacaoId: document.getElementById("motivacao").value,
-        eventoId: 2,
+        eventoId: sessionStorage.getItem("eventoId"),
         utiId: 1
-        //eventoId: sessionStorage.getItem("eventoId"),
         //utiId: sessionStorage.getItem("utiId")
     
     };

@@ -33,6 +33,12 @@ router.put("/:id/estado", async function(req,res,next) {
   let newEstado = req.body;
   let result = await eModel.changeEstado(newEstado); res.send(result); 
   }); 
+
+router.post("/", async function(req,res,next) { 
+  console.log("Creating Registo");
+    let newRegisto = req.body;
+    let result = await eModel.saveRegisto(newRegisto); res.send(result); 
+  });
     
     
 module.exports = router;
