@@ -27,7 +27,7 @@ async function criar() {
             horaFId: document.getElementById("horaF").value,
             categoriaId: document.getElementById("categoria").value,
             maxPartId: document.getElementById("maxPart").value,
-            //latId: document.getElementById("latitude").value, colocar no Evento Model quando estiver concluido
+            //latId: document.getElementById("latitude").value, ###colocar no Evento Model quando estiver concluido
             //lonId: document.getElementById("longitude").value,
             //moradaId: document.getElementById("morada").value,
             //gesId = sessionStorage.getItem("gesId");
