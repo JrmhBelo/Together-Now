@@ -17,8 +17,8 @@ window.onload = async function () {
   mymap.on("click", function(e){
     const {lat,lng} = e.latlng
   myMarker.setLatLng([lat, lng])
-  document.getElementById('latitude').textContent = lat
-  document.getElementById('longitude').textContent = lng
+  document.getElementById("latitude").textContent = lat
+  document.getElementById("longitude").textContent = lng
   })
 }
 
