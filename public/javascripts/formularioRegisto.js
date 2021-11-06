@@ -16,14 +16,14 @@ async function registar() {
     
     };
     try {
-    let evento = await $.ajax({
+    let registo = await $.ajax({
         url: "/api/eventos/registo/",
         method: 'post',
         dataType: 'json',
         data: JSON.stringify(obj),
         contentType: 'application/json'
     });
-    console.log(evento);
+    console.log(registo);
     document.getElementById("Concluído").innerHTML =
         "Utilizador Registado";
 } catch (err) {
