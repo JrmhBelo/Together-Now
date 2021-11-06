@@ -1,7 +1,7 @@
-
+var Default_Coords = [38.707325418964764, -9.152454160542419]
 window.onload = async function () {
 
-    mymap = L.map('mapid').setView([38.707325418964764, -9.152454160542419], 12);
+    mymap = L.map('mapid').setView(L.latlng(Default_Coords[0], Default_Coords[1], 12));
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -11,9 +11,17 @@ window.onload = async function () {
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoibWJ1Z2FsaG8iLCJhIjoiY2phOWdhbWR5MGprdDJ5cDgzenR5MXMxMCJ9.n38CZPOHiDjdbKXw2YuEmA'
     }).addTo(mymap)
+
+    var myMarker= L.marker(Default_Coords.addTo(mymap))
+
+    mymap.on("click", function(e){
+        var {lat,lng} = e.latlng
+        console.log(lat,lng)
+        myMarker.setLatLng([lat, lng])
+    }
     //document.getElementById('latitude').textContent = lat
     //document.getElementById('longitude').textContent = lon
-}
+    )}
 
 async function criar() {
  
