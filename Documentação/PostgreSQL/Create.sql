@@ -3,29 +3,29 @@
 
 CREATE TABLE utilizador(
 	uti_ID serial,
-	uti_nomeP varchar(30),
-	uti_nomeU varchar(30),
+	uti_nomeP varchar(30) NOT NULL,
+	uti_nomeU varchar(30) NOT NULL,
 	uti_email varchar(50),
 	uti_pass varchar(50),
 	uti_telemovel varchar(9),
 	uti_nascimento date,
-	uti_idade int,
-	uti_totalP int,
+	uti_idade int, --Deveriamos retirar a idade mas sim 
+	uti_totalP int DEFAULT 0,
 	uti_genero char(1),
 	PRIMARY KEY (uti_ID)
 );
 
 CREATE TABLE gestorEvento(
 	ges_ID serial,
-	ges_nomeP varchar(30),
-	ges_nomeU varchar(30),
+	ges_nomeP varchar(30) NOT NULL,
+	ges_nomeU varchar(30) NOT NULL,
 	ges_email varchar(50),
 	ges_pass varchar(50),
 	ges_telemovel varchar(9),
 	ges_nascimento date,
-	ges_idade int,
+	ges_idade int, --Deveriamos retirar a idade mas sim 
 	ges_organizacao varchar(30),
-	ges_genero char(1),
+	ges_genero char(1) --CHECK (ges_genero = 'M' OR ges_genero = 'F'),
 	PRIMARY KEY (ges_ID)
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE evento(
 	eve_maxParticipantes int,
 	eve_lati float,
 	eve_lon float,
-	eve_estado varchar(20) DEFAULT 'Iniciado',
+	eve_estado varchar(20) DEFAULT 'Por iniciar',
 	eve_categ varchar(20),
 	ges_ID int,
 	PRIMARY KEY (eve_id),
@@ -85,7 +85,10 @@ create table cria(
 	FOREIGN KEY (ges_id) REFERENCES gestorevento (ges_id)
 )
 	
+---------------------------------
 
+ALTER TABLE gestorevento
+ADD CONSTRAINT ges_genero CHECK (ges_genero = 'M' OR ges_genero = 'F');
 
-
-
+ALTER TABLE utilizador
+ADD CONSTRAINT uti_genero CHECK (uti_genero = 'M' OR uti_genero = 'F' or uti_genero = null);
