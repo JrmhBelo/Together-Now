@@ -1,4 +1,3 @@
-var Default_Coords = [,]
 window.onload = async function () {
 
     mymap = L.map('mapid').setView(38.707325418964764, -9.152454160542419, 12);
@@ -12,11 +11,11 @@ window.onload = async function () {
         accessToken: 'pk.eyJ1IjoibWJ1Z2FsaG8iLCJhIjoiY2phOWdhbWR5MGprdDJ5cDgzenR5MXMxMCJ9.n38CZPOHiDjdbKXw2YuEmA'
     }).addTo(mymap)
 
-    var myMarker= L.marker(Default_Coords.addTo(mymap))
+   
 
     mymap.on("click", function(e){
         var {lat,lng} = e.latlng
-        myMarker.setLatLng([lat, lng])
+        L.marker(lat,lng).addTo(mymap)
     }
     //document.getElementById('latitude').textContent = lat
     //document.getElementById('longitude').textContent = lon
