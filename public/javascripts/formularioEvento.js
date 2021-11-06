@@ -69,7 +69,7 @@ async function criar() {
             horaFId: document.getElementById("horaF").value,
             categoriaId: document.getElementById("categoria").value,
             maxPartId: document.getElementById("maxPart").value,
-            latId: document.getElementById("latitude").textContent, 
+            latId: document.getElementById("latitude").textContent,
             lonId: document.getElementById("longitude").textContent,
             //moradaId: document.getElementById("morada").value,
             //gesId = sessionStorage.getItem("gesId");
