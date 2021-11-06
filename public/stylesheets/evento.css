@@ -52,6 +52,7 @@ header .navigation a:hover{
     font-weight: 800;
     letter-spacing: 2px;
     line-height: 60px;
+    margin-left: 250px;
 }
   
 .content .info h2 span{
