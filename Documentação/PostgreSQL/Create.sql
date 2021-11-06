@@ -77,7 +77,7 @@ CREATE TABLE participa (
 
 
 create table cria(
-	cria_data date,
+	cria_data date DEFAULT CURRENT_DATE,
 	ges_ID int,
 	eve_ID int,
 	PRIMARY KEY (ges_id,eve_id),
