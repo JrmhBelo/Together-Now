@@ -18,6 +18,7 @@ mymap.on("click", function(e){
     L.marker(lat,lng).addTo(mymap)
 })
 
+}
     
 // search location handler
 let typingInterval,
@@ -32,7 +33,7 @@ function onTyping(e) {
     searchLocation(value)
   }, 500)
 }
-}
+
 
 // search handler
 function searchLocation(keyword) {
