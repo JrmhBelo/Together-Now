@@ -41,8 +41,8 @@ module.exports.getEventoById = async function(id) {
 
 module.exports.saveEvento = async function(evento) { 
     try { 
-    let sql ="Insert Into evento (eve_nome, eve_beneficiario, eve_descricao, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_categ, eve_maxparticipantes) Values ($1,$2,$3,$4,$5,$6,$7,$8,$9)";
-    let result = await pool.query( sql , [evento.nomeId, evento.beneficiarioId, evento.descricaoId, evento.dataIId, evento.dataFId, evento.horaIId, evento.horaFId, evento.categoriaId, evento.maxPartId]); 
+    let sql ="Insert Into evento (eve_nome, eve_beneficiario, eve_descricao, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_categ, eve_maxparticipantes eve_lati, eve_lon) Values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)";
+    let result = await pool.query( sql , [evento.nomeId, evento.beneficiarioId, evento.descricaoId, evento.dataIId, evento.dataFId, evento.horaIId, evento.horaFId, evento.categoriaId, evento.maxPartId, evento.latId, evento.lonId]); 
     return { status:200, result: result }; } catch (err) { 
                console.log(err);
                return { status:500, result: err};
