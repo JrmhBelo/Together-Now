@@ -17,7 +17,7 @@ async function registar() {
     };
     try {
     let evento = await $.ajax({
-        url: "/api/eventos/",
+        url: "/api/eventos/registo/",
         method: 'post',
         dataType: 'json',
         data: JSON.stringify(obj),
