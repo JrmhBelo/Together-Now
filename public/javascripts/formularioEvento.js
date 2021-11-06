@@ -1,6 +1,6 @@
 window.onload = async function () {
 
-    mymap = L.map('mapid').setView(38.707325418964764, -9.152454160542419, 12);
+    mymap = L.map('mapid').setView([38.707325418964764, -9.152454160542419], 12);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -10,7 +10,7 @@ window.onload = async function () {
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoibWJ1Z2FsaG8iLCJhIjoiY2phOWdhbWR5MGprdDJ5cDgzenR5MXMxMCJ9.n38CZPOHiDjdbKXw2YuEmA'
     }).addTo(mymap)
-
+}
    
 
 mymap.on("click", function(e){
@@ -18,8 +18,7 @@ mymap.on("click", function(e){
     L.marker(lat,lng).addTo(mymap)
 })
 
-}
-    
+/*    
 // search location handler
 let typingInterval,
 
@@ -53,7 +52,7 @@ function searchLocation(keyword) {
 
     //document.getElementById('latitude').textContent = lat
     //document.getElementById('longitude').textContent = lon
-
+*/
 async function criar() {
  
         let obj = {
