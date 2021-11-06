@@ -69,8 +69,8 @@ async function criar() {
             horaFId: document.getElementById("horaF").value,
             categoriaId: document.getElementById("categoria").value,
             maxPartId: document.getElementById("maxPart").value,
-            latId: document.getElementById("latitude").textContent, 
-            lonId: document.getElementById("longitude").textContent,
+            latId: document.getElementById("latitude").value,
+            lonId: document.getElementById("longitude").value,
             //moradaId: document.getElementById("morada").value,
             //gesId = sessionStorage.getItem("gesId");
         };
