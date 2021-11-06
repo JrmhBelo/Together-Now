@@ -17,8 +17,8 @@ window.onload = async function () {
   mymap.on("click", function(e){
     const {lat,lng} = e.latlng
   myMarker.setLatLng([lat, lng])
-  document.getElementById('latitude').textContent = lat
-  document.getElementById('longitude').textContent = lng
+  document.getElementById("latitude").textContent = lat
+  document.getElementById("longitude").textContent = lng
   })
 }
 
@@ -69,8 +69,8 @@ async function criar() {
             horaFId: document.getElementById("horaF").value,
             categoriaId: document.getElementById("categoria").value,
             maxPartId: document.getElementById("maxPart").value,
-            latId: document.getElementById("latitude").value, 
-            lonId: document.getElementById("longitude").value,
+            latId: document.getElementById("latitude").textContent, 
+            lonId: document.getElementById("longitude").textContent,
             //moradaId: document.getElementById("morada").value,
             //gesId = sessionStorage.getItem("gesId");
         };
