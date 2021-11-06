@@ -5,7 +5,6 @@ var logger = require('morgan');
 
 var utilizadorRouter = require('./routes/utilizadorRoutes');
 var eventoRouter = require('./routes/eventoRoutes');
-var registoRouter = require('./routes/registoRoutes');
 
 var app = express();
 
@@ -17,7 +16,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/utilizador', utilizadorRouter);
 app.use('/api/eventos', eventoRouter);
-app.use('/api/registos', registoRouter);
 
 module.exports = app;
 
