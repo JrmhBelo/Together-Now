@@ -1,4 +1,5 @@
 window.onload = async function () {
+    var DEFAULT_COORD = [38.707325418964764, -9.152454160542419]
 
     mymap = L.map('mapid').setView([38.707325418964764, -9.152454160542419], 12);
 
@@ -10,13 +11,16 @@ window.onload = async function () {
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoibWJ1Z2FsaG8iLCJhIjoiY2phOWdhbWR5MGprdDJ5cDgzenR5MXMxMCJ9.n38CZPOHiDjdbKXw2YuEmA'
     }).addTo(mymap)
-}
-   
 
-mymap.on("click", function(e){
-    var {lat,lng} = e.latlng
-    L.marker(lat,lng).addTo(mymap)
-})
+  var myMarker = L.marker(DEFAULT_COORD).addTo(mymap)
+
+  mymap.on("click", function(e){
+    const {lat,lng} = e.latlng
+  myMarker.setLatLng([lat, lng])
+  document.getElementById('latitude').textContent = lat
+  document.getElementById('longitude').textContent = lng
+  })
+}
 
 /*    
 // search location handler
