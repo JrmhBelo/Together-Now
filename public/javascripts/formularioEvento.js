@@ -13,10 +13,42 @@ window.onload = async function () {
 
    
 
-    mymap.on("click", function(e){
-        var {lat,lng} = e.latlng
-        L.marker(lat,lng).addTo(mymap)
-    }
+mymap.on("click", function(e){
+    var {lat,lng} = e.latlng
+    L.marker(lat,lng).addTo(mymap)
+})
+
+    
+// search location handler
+let typingInterval,
+
+// typing handler
+function onTyping(e) {
+  clearInterval(typingInterval)
+  const {value} = e
+  
+  typingInterval = setInterval(() => {
+    clearInterval(typingInterval)
+    searchLocation(value)
+  }, 500)
+},
+
+// search handler
+function searchLocation(keyword) {
+  if(keyword) {
+    // request to nominatim api
+    fetch(`https://nominatim.openstreetmap.org/search?q=${keyword}&format=json`)
+      .then((response) => {
+        return response.json()
+      }).then(json => {
+       // get response data from nominatim
+       console.log("json", json)
+        if(json.length > 0) return renderResults(json)
+        else alert("Não foi possível")
+    })
+  }
+}
+
     //document.getElementById('latitude').textContent = lat
     //document.getElementById('longitude').textContent = lon
     )}

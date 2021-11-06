@@ -1,3 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(../images/Voluntariado.red_.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo{
+    padding: 5px;
+    width: 150px;
+}
+
+header .navigation a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 2px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+header .navigation a:not(:last-child){
+  margin-right: 30px;
+}
+
+header .navigation a:hover{
+  background: #fff;
+}
+
 #main {
   width: 650px;
   height: 200px;
