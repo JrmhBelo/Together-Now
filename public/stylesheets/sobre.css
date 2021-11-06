@@ -7,18 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-section{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: url(../images/Voluntariado.red_.jpg)no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 header{
   position: relative;
   top: 0;
