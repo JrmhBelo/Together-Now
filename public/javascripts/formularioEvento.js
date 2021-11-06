@@ -31,7 +31,8 @@ function onTyping(e) {
     clearInterval(typingInterval)
     searchLocation(value)
   }, 500)
-},
+}
+}
 
 // search handler
 function searchLocation(keyword) {
@@ -51,7 +52,6 @@ function searchLocation(keyword) {
 
     //document.getElementById('latitude').textContent = lat
     //document.getElementById('longitude').textContent = lon
-    )}
 
 async function criar() {
  
