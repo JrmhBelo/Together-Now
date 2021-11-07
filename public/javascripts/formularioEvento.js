@@ -12,6 +12,8 @@ window.onload = async function () {
         accessToken: 'pk.eyJ1IjoibWJ1Z2FsaG8iLCJhIjoiY2phOWdhbWR5MGprdDJ5cDgzenR5MXMxMCJ9.n38CZPOHiDjdbKXw2YuEmA'
     }).addTo(mymap)
 
+    L.Control.geocoder().addTo(mymap);
+
   var myMarker = L.marker(DEFAULT_COORD).addTo(mymap)
 
   mymap.on("click", function(e){
@@ -22,41 +24,6 @@ window.onload = async function () {
   })
 }
 
-/*    
-// search location handler
-let typingInterval,
-
-// typing handler
-function onTyping(e) {
-  clearInterval(typingInterval)
-  const {value} = e
-  
-  typingInterval = setInterval(() => {
-    clearInterval(typingInterval)
-    searchLocation(value)
-  }, 500)
-}
-
-
-// search handler
-function searchLocation(keyword) {
-  if(keyword) {
-    // request to nominatim api
-    fetch(`https://nominatim.openstreetmap.org/search?q=${keyword}&format=json`)
-      .then((response) => {
-        return response.json()
-      }).then(json => {
-       // get response data from nominatim
-       console.log("json", json)
-        if(json.length > 0) return renderResults(json)
-        else alert("Não foi possível")
-    })
-  }
-}
-
-    //document.getElementById('latitude').textContent = lat
-    //document.getElementById('longitude').textContent = lon
-*/
 async function criar() {
  
         let obj = {
