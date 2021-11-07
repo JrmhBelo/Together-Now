@@ -39,10 +39,10 @@ module.exports.loginUtilizador = async function(email,pass) {
 
 module.exports.getUtilizadorEventos = async function(id) {
     try {
-        let sql =`Select * from evento inner join regista 
-                  on evento.uti_id = regista.uti_id inner join utilizador
-                  on regista.uti_id = utilizador.uti_id 
-                  where uti_id = $1`;
+        let sql =`Select evento.* from utilizador inner join regista 
+                    on utilizador.uti_id = regista.uti_id inner join evento
+                    on regista.eve_id = evento.eve_id
+                    where utilizador.uti_id = $1`;
         let result = await pool.query(sql,[id]);
         let units = result.rows;
         return { status:200, result:units};
