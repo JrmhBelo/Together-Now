@@ -1,6 +1,7 @@
 window.onload = async function() {
     let elem = document.getElementById("eventosGestao");
     try {
+        //let gesId = sessionStorage.getItem("gesId");
         gesId = 1;
         let eventos = await $.ajax({
         url: "/api/eventos/"+gesId+"/gestor", //mudar 1 para gesId quando tiver login para gestor de eventos
