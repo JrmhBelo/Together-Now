@@ -3,7 +3,7 @@ window.onload = async function() {
         //let utiId = sessionStorage.getItem("utiId");
         let utiId = 1;
         let eventos = await $.ajax({
-            url: `/api/utilizador/${utiId}/eventos`,
+            url: `/api/utilizador/`+utiId+`/eventos`,
             method: "get",
             dataType: "json"
         });
