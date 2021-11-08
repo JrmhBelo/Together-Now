@@ -1,4 +1,5 @@
 var eventoId;
+
 window.onload = async function() {
     let eventoId = sessionStorage.getItem("eventoId");
     try {
