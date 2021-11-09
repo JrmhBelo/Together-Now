@@ -29,14 +29,14 @@ window.onload = async function() {
 }
 
 async function iniciar() {
-    
+    let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
-        eventoId : sessionStorage.getItem("eventoId") ,
+        eventoId,
         estado : "Em Progresso"
-        }
+        };
         try{
         let evento = await $.ajax({
-            url: "/api/eventos/"+eventoId+"/estado",
+            url: "/api/eventos/estado/"+eventoId,
             method: 'put',
             dataType: 'json',
             data: JSON.stringify(obj),
@@ -49,14 +49,14 @@ async function iniciar() {
 }
 
 async function terminar() {
-    
+    let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
-        eventoId : sessionStorage.getItem("eventoId"),
+        eventoId,
         estado : "Terminado"
-        }
+        };
         try{
         let evento = await $.ajax({
-            url: "/api/eventos/"+eventoId+"/estado",
+            url: "/api/eventos/estado/"+eventoId,
             method: 'put',
             dataType: 'json',
             data: JSON.stringify(obj),
@@ -69,14 +69,14 @@ async function terminar() {
 }
 
 async function cancelar() {
-    
+    let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
-        eventoId : sessionStorage.getItem("eventoId"),
+        eventoId,
         estado : "Cancelado"
-        }
+        };
         try{
         let evento = await $.ajax({
-            url: "/api/eventos/"+eventoId+"/estado",
+            url: "/api/eventos/estado/"+eventoId,
             method: 'put',
             dataType: 'json',
             data: JSON.stringify(obj),
