@@ -71,6 +71,17 @@ header .navigation a:hover{
     margin-left: 250px;
 }
 
+.content .info h4{
+  color: #041f27;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+  margin-left: 250px;
+}
+
 
 .content .info-btn{
     color: #fff;
