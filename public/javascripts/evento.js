@@ -13,7 +13,7 @@ window.onload = async function() {
 
         document.getElementById("nome").innerHTML = evento.eve_nome;
         document.getElementById("descricao").innerHTML = evento.eve_descricao;
-        today.toLocaleDateString(document.getElementById("dataI").innerHTML = evento.eve_datai);
+        document.getElementById("dataI").innerHTML = evento.eve_datai;
         document.getElementById("dataF").innerHTML = evento.eve_dataf;
         document.getElementById("horaI").innerHTML = evento.eve_horai;
         document.getElementById("horaF").innerHTML = evento.eve_horaf;
