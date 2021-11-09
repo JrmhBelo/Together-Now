@@ -28,16 +28,11 @@ router.get('/:id/gestor', async function(req, res, next) {
     res.status(result.status).send(result.result);
   });
 
-router.put("/:id/estado", async function(req,res,next) { 
-  console.log("Updating Evento with eve_id "+id);
+router.put("/estado/:id", async function(req,res,next) { 
+  console.log("Updating Evento");
   let newEstado = req.body;
   let result = await eModel.changeEstado(newEstado); res.send(result); 
   }); 
 
-router.post("/registo", async function(req,res,next) { 
-  console.log("Creating Registo");
-    let newRegisto = req.body;
-    let result = await eModel.saveRegisto(newRegisto); res.send(result); 
-  });
 
 module.exports = router;
