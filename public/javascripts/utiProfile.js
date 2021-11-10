@@ -21,5 +21,5 @@ window.onload = async function() {
 }
 function showEvento(id) {
     sessionStorage.setItem("eventoId",id);
-    window.location = "eventoGestao.html";
+    window.location = "evento.html";
 }
