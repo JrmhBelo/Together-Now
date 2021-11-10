@@ -93,6 +93,12 @@ ADD CONSTRAINT ges_genero CHECK (ges_genero = 'M' OR ges_genero = 'F');
 ALTER TABLE utilizador
 ADD CONSTRAINT uti_genero CHECK (uti_genero = 'M' OR uti_genero = 'F' or uti_genero = null);
 
+alter table regista
+add column reg_cidade varchar(50);
+
+alter table regista
+add column reg_concelho varchar(50);
+
 --ALTER TABLE cria
 --alter Column cria_data set DEFAULT CURRENT_DATE
 --só para referencia

@@ -2,8 +2,8 @@ async function registar() {
  
     let obj = {
 
-        /*cidadeId: document.getElementById("cidade").value,
-        concelhoId: document.getElementById("concelho").value,*/
+        cidadeId: document.getElementById("cidade").value,
+        concelhoId: document.getElementById("concelho").value,
         moradaId: document.getElementById("morada").value,
         escivilId: document.getElementById("escivil").value,
         escolaridadeId: document.getElementById("escolaridade").value,
@@ -17,7 +17,7 @@ async function registar() {
     };
     try {
     let registo = await $.ajax({
-        url: "/api/eventos/registo/",
+        url: "/api/registos/",
         method: 'post',
         dataType: 'json',
         data: JSON.stringify(obj),
