@@ -32,7 +32,7 @@ async function iniciar() {
     let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
         eventoId,
-        estado : "Em Progresso"
+        estado : "Iniciado"
         };
         try{
         let evento = await $.ajax({
@@ -73,6 +73,26 @@ async function cancelar() {
     let obj = {
         eventoId,
         estado : "Cancelado"
+        };
+        try{
+        let evento = await $.ajax({
+            url: "/api/eventos/estado/"+eventoId,
+            method: 'put',
+            dataType: 'json',
+            data: JSON.stringify(obj),
+            contentType: 'application/json'
+        });
+        console.log(evento);
+    } catch (err) {
+        console.log(err);
+    }    
+}
+
+async function adiar() {
+    let eventoId = sessionStorage.getItem("eventoId");
+    let obj = {
+        eventoId,
+        estado : "Adiado"
         };
         try{
         let evento = await $.ajax({
