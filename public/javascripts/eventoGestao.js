@@ -30,18 +30,21 @@ window.onload = async function() {
 }
 
 async function loadStats() {
+    let eventoId = sessionStorage.getItem("eventoId");
     try {
-        let eventoId = await $.ajax({
+        let utilizadores = await $.ajax({
             url: "/api/utilizador/"+eventoId+"estatisticas",
             method: "get",
             dataType: "json"
         });
+        consol
         let tbody = document.getElementById("estatisticas");
         let html ="";
         for(let utilizador of utilizadores)
-            html += `<tr><td>${utilizador.uti_nomep}</td>"+ 
-            "<td>${utilizador.uti_nomeu}</td>"+
-            "<td>${utilizador.uti_idade}</td><td>${utilizador.uti_totalp}</td></tr>`;
+            html += `<tr><td>${utilizador.uti_nomep}</td>`+ 
+            `<td>${utilizador.uti_nomeu}</td>`+
+            `<td>${utilizador.uti_idade}</td>`+
+            `<td>${utilizador.uti_totalp}</td></tr>`;
         tbody.innerHTML = html;
     } catch(err) {
         console.log(err);
