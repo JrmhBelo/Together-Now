@@ -1,6 +1,7 @@
 var eventoId;
 
 window.onload = async function() {
+    loadStats();
     let eventoId = sessionStorage.getItem("eventoId");
     try {
         let evento = await $.ajax({
@@ -26,22 +27,26 @@ window.onload = async function() {
         console.log(err);
         
     }
+}
+
+async function loadStats() {
     try {
         let eventoId = await $.ajax({
             url: "/api/utilizador/"+eventoId+"estatisticas",
             method: "get",
             dataType: "json"
         });
+        let tbody = document.getElementById("estatisticas");
         let html ="";
         for(let utilizador of utilizadores)
             html += `<tr><td>${utilizador.uti_nomep}</td>"+ 
             "<td>${utilizador.uti_nomeu}</td>"+
             "<td>${utilizador.uti_idade}</td><td>${utilizador.uti_totalp}</td></tr>`;
-        elem.innerHTML = html;
+        tbody.innerHTML = html;
     } catch(err) {
         console.log(err);
         elem.innerHTML = "<h1> Page not Available </h1>"
-}
+    }
 }
 
 
