@@ -2,7 +2,7 @@ var pool = require("./connection");
 
 module.exports.getAllEventos = async function() {
     try {
-        let sql =`Select * from Evento where eve_estado="Criado"`;
+        let sql =`Select * from Evento where eve_estado='Criado'`;
         let result = await pool.query(sql);
         let eventos = result.rows;
         return { status:200, result:eventos};
