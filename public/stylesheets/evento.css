@@ -62,11 +62,11 @@ header .navigation a:hover{
 
 .content .info h6{
     color: #041f27;
-    font-size: 10px;
+    font-size: 30px;
     text-transform: capitalize;
     font-weight: 600;
     letter-spacing: 2px;
-    line-height: 60px;
+    line-height: 30px;
     margin-bottom: 30px;
     margin-left: 250px;
 }
