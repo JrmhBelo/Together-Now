@@ -15,7 +15,7 @@ router.get('/:id', async function(req, res, next) {
     res.status(result.status).send(result.result);
   });
 
-router.get('/categoria', async function(req, res, next) {
+router.get('/:categoria', async function(req, res, next) {
   let categoria = req.params.categoria;
   console.log("Sending Evento with categoria "+categoria);
   let result = await eModel.getEventoByCategoria(categoria);

@@ -63,6 +63,15 @@ header .navigation a:hover{
     text-align: center;
 }
 
+.content .campo{
+  color: #226A80;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-left: 50px;
+}
+
 main {
     display:flex;
     justify-content: space-around;

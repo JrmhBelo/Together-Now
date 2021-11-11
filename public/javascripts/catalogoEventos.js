@@ -21,3 +21,21 @@ function showEvento(id) {
     window.location = "evento.html";
 }
 
+
+async function filtrar() {
+    try {
+        let categoria = document.getElementById("categoria").value;
+        let eventos = await $.ajax({
+            url: "/api/eventos/"+categoria,
+            method: "get",
+            dataType: "json"
+        });
+        showEventos(eventos);
+    } catch(err) {
+        let elemMain = document.getElementById("eventos");
+        console.log(err);
+        elemMain.innerHTML = "<h1> Página não está disponível</h1>"+
+                "<h2> Por favor tente mais tarde</h2>";
+    }
+}
+
