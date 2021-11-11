@@ -57,3 +57,17 @@ module.exports.changeEstado = async function(estado) { try {
                 return { status:500, result: err};
             }
     }
+
+module.exports.getEventoByCategoria = async function(categoria) {
+    try {
+        let sql ="Select * from Evento where eve_categ = $1";
+        let result = await pool.query(sql,[categoria]);
+        if (result.rows.length > 0)
+            return {status: 200, result: result.rows[0]};
+        else return{status: 404, result: {msg: "Eventos Not Found"}}
+    } catch (err) {
+        console.log(err);
+        return { status:500, result: err};
+    }
+}
+

@@ -15,6 +15,13 @@ router.get('/:id', async function(req, res, next) {
     res.status(result.status).send(result.result);
   });
 
+router.get('/categoria', async function(req, res, next) {
+  let categoria = req.params.categoria;
+  console.log("Sending Evento with categoria "+categoria);
+  let result = await eModel.getEventoByCategoria(categoria);
+  res.status(result.status).send(result.result);
+});
+
 router.post("/", async function(req,res,next) { 
   console.log("Creating Evento");
     let evento = req.body;
