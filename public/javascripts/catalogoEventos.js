@@ -32,10 +32,10 @@ async function filtrar() {
         });
         showEventos(eventos);
     } catch(err) {
-        let elemMain = document.getElementById("eventos");
+        let elem = document.getElementById("eventos");
         console.log(err);
         elemMain.innerHTML = "<h1> Página não está disponível</h1>"+
-                "<h2> Por favor tente mais tarde</h2>";
+                            "<h2> Por favor tente mais tarde</h2>";
     }
 }
 
