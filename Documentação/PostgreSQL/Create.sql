@@ -31,17 +31,17 @@ CREATE TABLE gestorEvento(
 
 CREATE TABLE evento(
 	eve_ID serial,
-	eve_nome varchar(100),
-	eve_descricao varchar(100),
-	eve_beneficiario varchar(50),
+	eve_nome varchar(100) NOT NULL,
+	eve_descricao varchar(100) NOT NULL,
+	eve_beneficiario varchar(50) NOT NULL,
 	eve_dataI date,
 	eve_dataF date,
 	eve_horaI time,
 	eve_horaF time,
 	eve_morada varchar(240),
-	eve_maxParticipantes int,
-	eve_lati float,
-	eve_lon float,
+	eve_maxParticipantes int NOT NULL,
+	eve_lati float NOT NULL,
+	eve_lon float NOT NULL,
 	eve_estado varchar(20) DEFAULT 'Por iniciar',
 	eve_categ varchar(20),
 	ges_ID int,
@@ -98,6 +98,13 @@ add column reg_cidade varchar(50);
 
 alter table regista
 add column reg_concelho varchar(50);
+
+ALTER TABLE evento
+ADD CONSTRAINT eve_maxparticipantes CHECK (eve_maxparticipantes >= 2);
+
+
+
+
 
 --ALTER TABLE cria
 --alter Column cria_data set DEFAULT CURRENT_DATE
