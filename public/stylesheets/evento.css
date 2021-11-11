@@ -71,7 +71,7 @@ header .navigation a:hover{
     margin-left: 250px;
 }
 
-.content .info h4{
+.content .info h6{
   color: #041f27;
   font-size: 30px;
   text-transform: capitalize;

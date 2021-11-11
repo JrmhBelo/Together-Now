@@ -28,4 +28,10 @@ router.get('/:id/eventos',async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
+router.get('/:id/estatisticas',async function(req, res, next) {
+    let eveId = req.params.id;
+    let result = await uModel.getUtilizadorEstatisticas(eveId);
+    res.status(result.status).send(result.result);
+});
+
 module.exports = router;

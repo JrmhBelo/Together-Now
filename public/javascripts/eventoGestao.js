@@ -26,7 +26,24 @@ window.onload = async function() {
         console.log(err);
         
     }
+    try {
+        let eventoId = await $.ajax({
+            url: "/api/utilizador/"+eventoId+"estatisticas",
+            method: "get",
+            dataType: "json"
+        });
+        let html ="";
+        for(let utilizador of utilizadores)
+            html += `<tr><td>${utilizador.uti_nomep}</td>"+ 
+            "<td>${utilizador.uti_nomeu}</td>"+
+            "<td>${utilizador.uti_idade}</td><td>${utilizador.uti_totalp}</td></tr>`;
+        elem.innerHTML = html;
+    } catch(err) {
+        console.log(err);
+        elem.innerHTML = "<h1> Page not Available </h1>"
 }
+}
+
 
 async function iniciar() {
     let eventoId = sessionStorage.getItem("eventoId");
