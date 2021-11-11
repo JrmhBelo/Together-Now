@@ -10,18 +10,49 @@ window.onload = async function () {
         tileSize: 512,
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoibWJ1Z2FsaG8iLCJhIjoiY2phOWdhbWR5MGprdDJ5cDgzenR5MXMxMCJ9.n38CZPOHiDjdbKXw2YuEmA'
-    }).addTo(mymap)
+    }).addTo(mymap);
 
     L.Control.geocoder().addTo(mymap);
 
-  var myMarker = L.marker(DEFAULT_COORD).addTo(mymap)
+  var myMarker = L.marker(DEFAULT_COORD).addTo(mymap);
 
   mymap.on("click", function(e){
-    const {lat,lng} = e.latlng
-  myMarker.setLatLng([lat, lng])
-  document.getElementById("latitude").textContent = lat
-  document.getElementById("longitude").textContent = lng
-  })
+    var {lat,lng} = e.latlng
+    myMarker.setLatLng([lat, lng])
+    document.getElementById("latitude").textContent = lat;
+    document.getElementById("longitude").textContent = lng;
+    getMorada(lat,lng);
+    }) 
+  
+}
+
+async function getCoordenadas(morada) {
+    try {
+        let evento = await $.ajax({
+            url: "https://nominatim.openstreetmap.org/search?q="+morada+"&format=json",
+            method: "get",
+        });
+        for (let i = 0; i < 1 ; i++) {
+            document.getElementById("latitude").textContent = evento[i].lat;
+            document.getElementById("longitude").textContent = evento[i].lon;
+            myMarker.setLatLng([evento[i].lat, evento[i].lon])
+            mymap.panTo([evento[i].lat, evento[i].lon], animate=true)
+        }
+          } catch(err) {
+          console.log(err);
+       }
+}
+
+async function getMorada(lat,lng) {
+    try {
+    let evento = await $.ajax({
+        url: "https://nominatim.openstreetmap.org/reverse?lat="+lat+"&lon="+lng+"&format=json",
+        method: "get",
+    });
+    document.getElementById("morada").value = evento.display_name;
+        } catch(err) {
+        console.log(err);
+    }
 }
 
 async function criar() {

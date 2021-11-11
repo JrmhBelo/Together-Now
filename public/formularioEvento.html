@@ -87,7 +87,8 @@
                 <div class="campo">
                     <br>
                     <label for="morada"><strong>Morada: </strong></label>
-                    <input type="text" name="morada" id="morada" placeholder=" Insira a Morada do Evento ou Coloque um Marker" oninput="onTyping(this)" size="70">
+                    <input name="morada" id="morada" placeholder=" Insira a Morada do Evento ou Coloque um Marker" size="70"> 
+                    <button type="button" class="info-btn" onclick="getCoordenadas( document.getElementById('morada').value)">Search</button>
             </div>
                 <div class="campo">
                     <br>
