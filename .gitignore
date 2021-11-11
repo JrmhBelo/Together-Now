@@ -64,4 +64,4 @@ models/connection.js
 #Tambem
 
 connection.js
-.connection.js
+models/connection.js
