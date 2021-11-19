@@ -24,11 +24,14 @@ function showEvento(id) {
 
 async function filtrar() {
     try {
-        let categoria = document.getElementById("categoria").value;
+        let categoriaId= document.getElementById("categoria").value;   
+       
+        
         let eventos = await $.ajax({
-            url: "/api/eventos/"+categoria,
+            url: `/api/eventos/search/?categoria=${categoriaId}`,
             method: "get",
             dataType: "json"
+        
         });
         showEventos(eventos);
     } catch(err) {

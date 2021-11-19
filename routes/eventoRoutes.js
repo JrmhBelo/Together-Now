@@ -8,15 +8,16 @@ router.get('/', async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id', async function(req, res, next) {
+router.get('/:id[0-9+]', async function(req, res, next) { //
     let id = req.params.id;
     console.log("Sending Evento with id "+id);
     let result = await eModel.getEventoById(id);
     res.status(result.status).send(result.result);
   });
 
-router.get('/:categoria', async function(req, res, next) {
-  let categoria = req.params.categoria;
+router.get('/search', async function(req, res, next) {
+  let categoria = req.query.categoria
+  console.log(categoria)
   console.log("Sending Evento with categoria "+categoria);
   let result = await eModel.getEventoByCategoria(categoria);
   res.status(result.status).send(result.result);
@@ -25,7 +26,8 @@ router.get('/:categoria', async function(req, res, next) {
 router.post("/", async function(req,res,next) { 
   console.log("Creating Evento");
     let evento = req.body;
-    let result = await eModel.saveEvento(evento); res.send(result); 
+    let result = await eModel.saveEvento(evento); 
+    res.send(result); 
   });
 
 router.get('/:id/gestor', async function(req, res, next) {

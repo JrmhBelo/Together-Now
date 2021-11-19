@@ -54,7 +54,7 @@ module.exports.getUtilizadorEventos = async function(id) {
 
 module.exports.getUtilizadorEstatisticas = async function(id) {
     try {
-        let sql =`SELECT utilizador.uti_nomep,utilizador.uti_nomeu,utilizador.uti_idade,utilizador.uti_totalp from utilizador 
+        let sql =`SELECT utilizador.*
                     inner join regista
                     On utilizador.uti_id=regista.uti_id 
                     inner join evento

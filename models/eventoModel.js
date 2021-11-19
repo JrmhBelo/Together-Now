@@ -60,6 +60,7 @@ module.exports.changeEstado = async function(estado) { try {
 
 module.exports.getEventoByCategoria = async function(categoria) {
     try {
+        console.log(categoria)
         let sql ="Select * from Evento where eve_categ = $1";
         let result = await pool.query(sql,[categoria]);
         if (result.rows.length > 0)
