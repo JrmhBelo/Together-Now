@@ -21,24 +21,30 @@ function showEvento(id) {
     window.location = "evento.html";
 }
 
+function createEventosHTML(eventos) {
+    let html = "";
+    for(let evento of eventos){
+            html += `<section onclick='showEvento(${evento.eve_id})'>
+                ${evento.eve_nome}</section>`
+    }
+    document.getElementById("eventos").innerHTML = html;
+}
 
 async function filtrar() {
     try {
-        let categoriaId= document.getElementById("categoria").value;   
+        let categoria= document.getElementById("categoria").value;   
        
         
         let eventos = await $.ajax({
-            url: `/api/eventos/search/?categoria=${categoriaId}`,
+            url: `/api/eventos/search/?categoria=${categoria}`,
             method: "get",
             dataType: "json"
         
         });
-        showEventos(eventos);
+        createEventosHTML(eventos);
     } catch(err) {
-        let elem = document.getElementById("eventos");
+        
         console.log(err);
-        elemMain.innerHTML = "<h1> Página não está disponível</h1>"+
-                            "<h2> Por favor tente mais tarde</h2>";
-    }
+        }
 }
 
