@@ -50,7 +50,7 @@ module.exports.saveEvento = async function(evento) {
     } 
 
 module.exports.changeEstado = async function(estado) { try { 
-    let sql ="Update evento Set eve_estado = $1 where eve_id = $2"; 
+    let sql ="Update evento Set eve_estado = $1 where eve_id = $2 returning eve_id"; 
     let result = await pool.query( sql , [ estado.estado , estado.eventoId ]); 
     return { status:200, result: result }; } catch (err) { 
                 console.log(err);
