@@ -41,6 +41,19 @@ header .navigation a:hover{
   background: #fff;
 }
 
+.grid-container {
+  display: grid;
+  grid-template: auto / auto auto;
+}
+
+.item1{
+  margin-bottom: 40px;
+}
+
+.item2 {
+  margin-bottom: 40px;
+}
+
 .content{
     text-align: center ;
 }
