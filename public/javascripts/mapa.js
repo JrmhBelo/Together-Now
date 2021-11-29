@@ -21,10 +21,11 @@ window.onload = async function () {
     });
 
     for (let evento of eventos)
-        var pop = L.popups({
-        closeonClick: true
-    }).setContent('<h4>Data de Inicio: ' + evento.datai + '<br> Data de Fim: ' + evento.dataf + '</h4>'); 
+        
         if (evento.eve_lati) {
+            var pop = L.popups({
+                closeonClick: true
+            }).setContent('<h4>Data de Inicio: ' + evento.datai + '<br> Data de Fim: ' + evento.dataf + '</h4>'); 
             var marker = L.marker([evento.eve_lati, evento.eve_lon]).addTo(mymap).bindPopup(pop);
             eventos.push({evento: evento, marker: marker});
             evento.marker = marker;   
