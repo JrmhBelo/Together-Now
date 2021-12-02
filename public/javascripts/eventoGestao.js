@@ -1,7 +1,7 @@
 var eventoId;
 
 window.onload = async function() {
-    loadStats();
+    // loadStats();
     let eventoId = sessionStorage.getItem("eventoId");
     try {
         let evento = await $.ajax({
