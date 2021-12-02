@@ -54,16 +54,18 @@ module.exports.getUtilizadorEventos = async function(id) {
 
 module.exports.getUtilizadorEstatisticas = async function(id) {
     try {
-        let sql =`SELECT utilizador.*
-                    inner join regista
-                    On utilizador.uti_id=regista.uti_id 
-                    inner join evento
-                    on regista.eve_id=evento.eve_id
-                    where evento.eve_id=$1`;
+        let sql =
+        `SELECT *,  evento.eve_id 
+        from utilizador
+        inner join regista
+        On utilizador.uti_id=regista.uti_id
+        left join evento
+        on regista.eve_id=evento.eve_id
+        where evento.eve_id=$1`;
         let result = await pool.query(sql,[id]);
         let units = result.rows;
         return { status:200, result:units};
-    } catch (err) {
+    } catch (err) { 
         console.log(err);
         return { status:500, result: err};
     }
