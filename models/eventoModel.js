@@ -30,10 +30,9 @@ module.exports.getEventoById = async function(id) {
     try {
         let sql ="Select * from Evento where eve_id = $1";
         let result = await pool.query(sql,[id]);
-        let evento = result.rows
-        // (result.rows.length > 0)
+        if (result.rows.length > 0)
             return {status: 200, result: result.rows[0]};
-        //else return{status: 404, result: {msg: "Evento Not Found"}}
+        else return{status: 404, result: {msg: "Evento Not Found"}}
     } catch (err) {
         console.log(err);
         return { status:500, result: err};
