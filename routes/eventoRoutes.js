@@ -8,7 +8,7 @@ router.get('/', async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id[0-9+]', async function(req, res, next) { //
+router.get('/:id', async function(req, res, next) { // '/:id[0-9+]'
     let id = req.params.id;
     console.log("Sending Evento with id "+id);
     let result = await eModel.getEventoById(id);
