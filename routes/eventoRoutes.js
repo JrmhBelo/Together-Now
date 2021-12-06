@@ -8,13 +8,6 @@ router.get('/', async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id', async function(req, res, next) { // '/:id[0-9+]'
-    let id = req.params.id;
-    console.log("Sending Evento with id "+id);
-    let result = await eModel.getEventoById(id);
-    res.status(result.status).send(result.result);
-  });
-
 router.get('/search', async function(req, res, next) {
   let categoria = req.query.categoria
   console.log(categoria)
@@ -22,6 +15,13 @@ router.get('/search', async function(req, res, next) {
   let result = await eModel.getEventoByCategoria(categoria);
   res.status(result.status).send(result.result);
 });
+
+router.get('/:id', async function(req, res, next) { // '/:id[0-9+]'
+    let id = req.params.id;
+    console.log("Sending Evento with id "+id);
+    let result = await eModel.getEventoById(id);
+    res.status(result.status).send(result.result);
+  });
 
 router.post("/", async function(req,res,next) { 
   console.log("Creating Evento");
