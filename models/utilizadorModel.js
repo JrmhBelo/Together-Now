@@ -37,12 +37,15 @@ module.exports.loginUtilizador = async function(email,pass) {
     }
 }
 
-module.exports.getUtilizadorEventos = async function(id) {
+module.exports.getUtilizadorEventos = async function(id) { 
+    //eventos inscritos do utlilizador x
     try {
-        let sql =`Select evento.* from utilizador inner join regista 
-                    on utilizador.uti_id = regista.uti_id inner join evento
-                    on regista.eve_id = evento.eve_id
-                    where utilizador.uti_id = $1`;
+        let sql =
+        `Select evento.* 
+        from utilizador inner join regista 
+        on utilizador.uti_id = regista.uti_id inner join evento
+        on regista.eve_id = evento.eve_id
+        where utilizador.uti_id = $1`;
         let result = await pool.query(sql,[id]);
         let units = result.rows;
         return { status:200, result:units};
@@ -52,8 +55,9 @@ module.exports.getUtilizadorEventos = async function(id) {
     }
 }
 
-module.exports.getUtilizadorEstatisticas = async function(id) {
-    try {
+module.exports.getUtilizadorEstatisticas = async function(id) {  
+    //envio dos utilizadores registados do event z
+    try {   
         let sql =
         `SELECT *,  evento.eve_id 
         from utilizador

@@ -22,14 +22,16 @@ router.post('/login',async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id/eventos',async function(req, res, next) {
+router.get('/:id/eventos',async function(req, res, next) { 
     let utiId = req.params.id;
+    console.log("Envio dos eventos incritos do utilizador " + utiId)
     let result = await uModel.getUtilizadorEventos(utiId);
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id/estatisticas',async function(req, res, next) {
+router.get('/:id/estatisticas',async function(req, res, next) { // ☻
     let eveId = req.params.id;
+    console.log ("Envio dos utilizadores registados no evento " +eveId)
     let result = await uModel.getUtilizadorEstatisticas(eveId);
     res.status(result.status).send(result.result);
 });
