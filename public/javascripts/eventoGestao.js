@@ -1,6 +1,7 @@
 var eventoId;
 
 window.onload = async function() {
+    loadStats();
     let eventoId = sessionStorage.getItem("eventoId");
     try {
         let evento = await $.ajax({
@@ -28,30 +29,32 @@ window.onload = async function() {
     }
 }
 
+//----
 
-
-// async function loadStats() {
-//     let eventoId = sessionStorage.getItem("eventoId");
-//     try {
-//         let utilizadores = await $.ajax({
-//             url: "/api/utilizador/"+eventoId+"estatisticas",
-//             method: "get",
-//             dataType: "json"
-//         });
-//         consol
-//         let tbody = document.getElementById("estatisticas");
-//         let html ="";
-//         for(let utilizador of utilizadores)
-//             html += `<tr><td>${utilizador.uti_nomep}</td>`+ 
-//             `<td>${utilizador.uti_nomeu}</td>`+
-//             `<td>${utilizador.uti_idade}</td>`+
-//             `<td>${utilizador.uti_totalp}</td></tr>`;
-//         tbody.innerHTML = html;
-//     } catch(err) {
-//         console.log(err);
-//         elem.innerHTML = "<h1> Page not Available </h1>"
-//     }
-// }
+async function loadStats() {
+    let eventoId = sessionStorage.getItem("eventoId");
+    try {
+        let utilizadores = await $.ajax({
+            url: "/api/utilizador/"+eventoId+"estatisticas",
+            method: "get",
+            dataType: "json"
+        });
+        console.log(utilizadores)
+        let tbody = document.getElementById("estatisticas"); //html tag
+        let html ="";
+        for(let utilizador of utilizadores)
+            html += `<tr><td>${utilizador.uti_nomep}</td>`
+            /*+ 
+            `<td>${utilizador.uti_nomeu}</td>`+ 
+            `<td>${utilizador.uti_idade}</td>`+
+            `<td>${utilizador.uti_totalp}</td></tr>`*/
+            ;
+        tbody.innerHTML = html;
+    } catch(err) {
+        console.log(err);
+        elem.innerHTML = "<h1> Page not Available </h1>"
+    }
+}
 
 
 async function iniciar() {
