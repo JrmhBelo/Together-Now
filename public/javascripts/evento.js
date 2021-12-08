@@ -42,4 +42,3 @@ function formatDate(date) {
     return [day, month, year].join('-');
 }
  
-
