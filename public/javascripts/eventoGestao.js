@@ -1,16 +1,17 @@
 var eventoId;
 
 window.onload = async function() {
-    loadStats();
+    
     let eventoId = sessionStorage.getItem("eventoId");
     try {
+        
         let evento = await $.ajax({
             url: "/api/eventos/"+eventoId,
             method: "get",
             dataType: "json"
         });
+        loadStats();
         console.log(evento);
-
         document.getElementById("nome").innerHTML = evento.eve_nome;
         document.getElementById("descricao").innerHTML = evento.eve_descricao;
         //document.getElementById("dataI").innerHTML = evento.eve_datai;
@@ -21,33 +22,34 @@ window.onload = async function() {
         document.getElementById("beneficiario").innerHTML = evento.eve_beneficiario;
         document.getElementById("estado").innerHTML = evento.eve_estado;
         document.getElementById("categoria").innerHTML = evento.eve_categ;
-            
+        document.getElementById("nomep").innerHTML= utilizador.uti_nomep;  // ☻
         
     } catch(err) {
         console.log(err);
         
     }
 }
-
 //----
 
 async function loadStats() {
     let eventoId = sessionStorage.getItem("eventoId");
     try {
         let utilizadores = await $.ajax({
-            url: "/api/utilizador/"+eventoId+"estatisticas",
+            url: "/api/utilizador/"+eventoId+"/estatisticas",
             method: "get",
             dataType: "json"
         });
         console.log(utilizadores)
+        document.getElementById("nomep").innerHTML = utilizadores.uti_nomep; //☻
         let tbody = document.getElementById("estatisticas"); //html tag
         let html ="";
         for(let utilizador of utilizadores)
-            html += `<tr><td>${utilizador.uti_nomep}</td>`
-            /*+ 
-            `<td>${utilizador.uti_nomeu}</td>`+ 
-            `<td>${utilizador.uti_idade}</td>`+
-            `<td>${utilizador.uti_totalp}</td></tr>`*/
+            html +=
+            `<tr><td>${utilizador.uti_nomep} </td>`+  //TO-DO AGUAS 
+            `<td>${utilizador.uti_nomeu} </td></tr>`
+            //`<td>${utilizador.uti_idade} </td>`+
+            //`<td>${utilizador.uti_totalp} </td>
+            
             ;
         tbody.innerHTML = html;
     } catch(err) {
@@ -55,7 +57,6 @@ async function loadStats() {
         elem.innerHTML = "<h1> Page not Available </h1>"
     }
 }
-
 
 async function iniciar() {
     let eventoId = sessionStorage.getItem("eventoId");
