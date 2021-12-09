@@ -14,7 +14,7 @@ module.exports.getAllEventos = async function() {
 
 module.exports.getAllEventosByGestorId = async function(id) {
     try {
-        let sql ="Select * from Evento where ges_id = $1 returning eve_id";
+        let sql ="Select * from Evento where ges_id = $1";
         let result = await pool.query(sql,[id]);
         let eventos = result.rows;
         if (result.rows.length > 0)
