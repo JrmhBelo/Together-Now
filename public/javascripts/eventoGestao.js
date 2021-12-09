@@ -1,7 +1,7 @@
 var eventoId;
 
 window.onload = async function() {
-    
+    loadStats();
     let eventoId = sessionStorage.getItem("eventoId");
     try {
         
@@ -10,7 +10,7 @@ window.onload = async function() {
             method: "get",
             dataType: "json"
         });
-        loadStats();
+        
         console.log(evento);
         document.getElementById("nome").innerHTML = evento.eve_nome;
         document.getElementById("descricao").innerHTML = evento.eve_descricao;
@@ -40,16 +40,17 @@ async function loadStats() {
             dataType: "json"
         });
         console.log(utilizadores)
-        document.getElementById("nomep").innerHTML = utilizadores.uti_nomep; //☻
+        //let tbody =document.getElementById("nomep").innerHTML = utilizadores.uti_nomep; //☻
         let tbody = document.getElementById("estatisticas"); //html tag
         let html ="";
         for(let utilizador of utilizadores)
-            html +=
-            `<tr><td>${utilizador.uti_nomep} </td>`+  //TO-DO AGUAS 
-            `<td>${utilizador.uti_nomeu} </td></tr>`
+            html +=`<table>`+
+            `<tr><td>${utilizador.uti_nomep} </td>`+
+            `<td>${utilizador.uti_nomeu} </td>`+
+            `<td> <input type="button" value="Pertence" onclick="participa()"></td>`+
             //`<td>${utilizador.uti_idade} </td>`+
             //`<td>${utilizador.uti_totalp} </td>
-            
+            `</tr></table>`
             ;
         tbody.innerHTML = html;
     } catch(err) {
@@ -136,4 +137,25 @@ async function adiar() {
     } catch (err) {
         console.log(err);
     }    
+}
+
+async function participa(){
+    let eventoId = sessionStorage.getItem("eventoId");
+    let obj = {
+        eventoId,
+        estado : "Adiado"
+        };
+        try{
+        let evento = await $.ajax({
+            url: "..."+eventoId,
+            method: 'put',
+            dataType: 'json',
+            data: JSON.stringify(obj),
+            contentType: 'application/json'
+        });
+        console.log(evento);
+    } catch (err) {
+        console.log(err);
+    } 
+
 }
