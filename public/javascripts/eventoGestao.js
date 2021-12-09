@@ -50,8 +50,7 @@ async function loadStats() {
             <td> &nbsp;|${utilizador.uti_idade}|</td>
             <td>&nbsp;<input type="button" value="Presente" onclick="participo()"></td>`+
             //<td>${utilizador.uti_totalp}</td>+
-            `</tr></table>`
-            ;
+            `</tr></table>`;
         tbody.innerHTML = html;
     } catch(err) {
         console.log(err);
