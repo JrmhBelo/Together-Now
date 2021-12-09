@@ -22,7 +22,7 @@ window.onload = async function() {
         document.getElementById("beneficiario").innerHTML = evento.eve_beneficiario;
         document.getElementById("estado").innerHTML = evento.eve_estado;
         document.getElementById("categoria").innerHTML = evento.eve_categ;
-        document.getElementById("nomep").innerHTML= utilizador.uti_nomep;  // ☻
+        //document.getElementById("nomep").innerHTML= utilizador.uti_nomep;  // ☻
         
     } catch(err) {
         console.log(err);
@@ -40,16 +40,16 @@ async function loadStats() {
             dataType: "json"
         });
         console.log(utilizadores)
-        //let tbody =document.getElementById("nomep").innerHTML = utilizadores.uti_nomep; //☻
+        
         let tbody = document.getElementById("estatisticas"); //html tag
         let html ="";
         for(let utilizador of utilizadores)
-            html +=`<table>`+
-            `<tr><td>${utilizador.uti_nomep} </td>`+
-            `<td>${utilizador.uti_nomeu} </td>`+
-            `<td> <input type="button" value="Pertence" onclick="participa()"></td>`+
-            //`<td>${utilizador.uti_idade} </td>`+
-            //`<td>${utilizador.uti_totalp} </td>
+            html +=`<table>
+            <tr><td>${utilizador.uti_nomep} </td>
+            <td>${utilizador.uti_nomeu} </td>
+            <td> &nbsp;|${utilizador.uti_idade}|</td>
+            <td>&nbsp;<input type="button" value="Presente" onclick="participo()"></td>`+
+            //<td>${utilizador.uti_totalp}</td>+
             `</tr></table>`
             ;
         tbody.innerHTML = html;
@@ -139,16 +139,16 @@ async function adiar() {
     }    
 }
 
-async function participa(){
+async function participo(){
     let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
         eventoId,
-        estado : "Adiado"
+        utiId: 1
         };
         try{
         let evento = await $.ajax({
-            url: "..."+eventoId,
-            method: 'put',
+            url: "/api/participo/",
+            method: 'post',
             dataType: 'json',
             data: JSON.stringify(obj),
             contentType: 'application/json'
