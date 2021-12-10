@@ -30,8 +30,21 @@
             <h3>Beneficiário: <span id="beneficiario"> </span></h3>
             <h3>Estado: <span id="estado"> </span></h3>
             <h3>Categoria: <span id="categoria"> </span></h3>
-            <h3>Participantes: <main id="estatisticas"> </h3></main>
-        
+           <h3>Participantes:
+           <table id="tab"> 
+            <thead>
+                <tr><th>Nome</th>
+                <th>Apelido<span id="cicPercorridas"></span></th>
+                <th>Idade<span id="extensao"></span></th>
+                <th>Pontos<span id="veiUtilizados"></span></th>
+                <th>Presença<span id="veiUtilizados"></span></th>
+            </tr></thead>
+            <tbody id="estatisticas"> </tbody>
+         </table>
+            </h3>
+
+
+
         </div>
         <a href="gesProfile.html">
             <input type="button" value="Terminado" onclick="terminar()" class="info-btn" />

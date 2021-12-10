@@ -45,6 +45,15 @@ header .navigation a:hover{
     margin-left:50px ;
 }
 
+.content .tab {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.content .td {
+  text-align: center;
+}
+
 .content .info h2{
     color: #226A80;
     font-size: 55px;
@@ -86,7 +95,9 @@ header .navigation a:hover{
     transition-property: background;
 
 }
-  
+
+
+
 .content .info-btn:hover{
     background: #0C4F60;
 }

@@ -44,13 +44,12 @@ async function loadStats() {
         let tbody = document.getElementById("estatisticas"); //html tag
         let html ="";
         for(let utilizador of utilizadores)
-            html +=`<table>
-            <tr><td>${utilizador.uti_nomep} </td>
+            html +=`<tr><td>${utilizador.uti_nomep} </td>
             <td>${utilizador.uti_nomeu} </td>
-            <td> &nbsp;|${utilizador.uti_idade}|</td>
-            <td>&nbsp;<input type="button" value="Presente" onclick="participo()"></td>`+
-            //<td>${utilizador.uti_totalp}</td>+
-            `</tr></table>`
+            <td>${utilizador.uti_idade}</td>
+            <td>${utilizador.uti_totalp}</td>
+            <td><input type="button" value="Presente" onclick="participo()"></td>
+            </tr>`
             ;
         tbody.innerHTML = html;
     } catch(err) {
