@@ -45,7 +45,8 @@ header .navigation a:hover{
     margin-left:50px ;
 }
 
-.content .tab {
+/* ☻ */
+.content .tab {     
   border-collapse: collapse;
   width: 100%;
 }
@@ -54,6 +55,7 @@ header .navigation a:hover{
   text-align: center;
 }
 
+/* ☻ */
 .content .info h2{
     color: #226A80;
     font-size: 55px;
