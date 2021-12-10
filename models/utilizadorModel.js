@@ -11,6 +11,7 @@ module.exports.getAllUtilizadores = async function() {
         return { status:500, result: err};
     }
 }
+
 module.exports.getUtilizadorById = async function(id) {
     try {
         let sql ="Select * from Utilizador where uti_id = $1";
@@ -24,7 +25,7 @@ module.exports.getUtilizadorById = async function(id) {
     }
 }
 
-module.exports.loginUtilizador = async function(email,pass) {
+module.exports.loginUtilizador = async function(email,pass) { // NAO TEMOS
     try {
         let sql ="Select * from utilizador where uti_email = $1 and uti_password = $2";
         let result = await pool.query(sql,[email,pass]);
