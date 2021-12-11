@@ -1,5 +1,5 @@
-async function login() {
-    try {
+async function login() {    // Para implementar, aguas ☻
+    try {       
         let obj = {
             email: document.getElementById("email").value,
             pass: document.getElementById("pass").value
