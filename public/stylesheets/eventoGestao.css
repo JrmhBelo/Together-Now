@@ -46,14 +46,21 @@ header .navigation a:hover{
 }
 
 /* ☻ */
-.content .tab {     
+.content .tab{     
   border-collapse: collapse;
   margin: 20px 0;
   width: 100%;
+  text-align: center;
+  border: 2px solid #143d49;
+
 }
 
 .content .td {
+  border-collapse: collapse;
+  margin: 20px 0;
+  width: 100%;
   text-align: center;
+  border: 2px solid #143d49;
 }
 
 /* ☻ */
