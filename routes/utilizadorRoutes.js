@@ -8,28 +8,30 @@ router.get('/', async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id/', async function(req, res, next) {
+router.get('/:id/', async function(req, res, next) { // '/:id[0-9+]' ou '/:id/'
     let id = req.params.id;
-	console.log ("Enviando utilizador com id " + id);
-    let result = await uModel.getUtilizadorById(pos); 
+	console.log ("Enviando utilizador com id " + id); // conflito !!!
+    let result = await uModel.getUtilizadorById(id); 
     res.status(result.status).send(result.result);
 });
 
-router.post('/login',async function(req, res, next) {
+router.post('/login',async function(req, res, next) { // NAO TEMOS AINDA
     let email = req.body.email;
     let password = req.body.pass;
     let result = await uModel.loginUtilizador(email,password);
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id/eventos',async function(req, res, next) {
+router.get('/:id/eventos',async function(req, res, next) { // só para id 1
     let utiId = req.params.id;
+    console.log("►Envio dos eventos incritos do utilizador " + utiId)
     let result = await uModel.getUtilizadorEventos(utiId);
     res.status(result.status).send(result.result);
 });
 
-router.get('/:id/estatisticas',async function(req, res, next) {
+router.get('/:id/estatisticas',async function(req, res, next) { // ☻
     let eveId = req.params.id;
+    console.log ("►Envio dos utilizadores registados no evento " +eveId)
     let result = await uModel.getUtilizadorEstatisticas(eveId);
     res.status(result.status).send(result.result);
 });

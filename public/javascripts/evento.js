@@ -1,5 +1,4 @@
 var eventoId;
-var today = new Date();
 
 window.onload = async function() {
     let eventoId = sessionStorage.getItem("eventoId");
@@ -13,8 +12,8 @@ window.onload = async function() {
 
         document.getElementById("nome").innerHTML = evento.eve_nome;
         document.getElementById("descricao").innerHTML = evento.eve_descricao;
-        document.getElementById("dataI").innerHTML = evento.eve_datai;
-        document.getElementById("dataF").innerHTML = evento.eve_dataf;
+        document.getElementById("dataI").innerHTML = formatDate(evento.eve_datai);
+        document.getElementById("dataF").innerHTML = formatDate(evento.eve_dataf);
         document.getElementById("horaI").innerHTML = evento.eve_horai;
         document.getElementById("horaF").innerHTML = evento.eve_horaf;
         document.getElementById("maxPart").innerHTML = evento.eve_maxparticipantes;
@@ -29,4 +28,17 @@ window.onload = async function() {
     }
 }
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
 
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [day, month, year].join('-');
+}
+ 

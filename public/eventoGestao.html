@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+    <style>
+        
+
+    </style>
+
     <head>
         <link rel="shortcut icon" , type = "image/PNG" , href = "images/Together Now LOGO.PNG">
         <meta charset="UTF-8">
@@ -30,9 +35,23 @@
             <h3>Beneficiário: <span id="beneficiario"> </span></h3>
             <h3>Estado: <span id="estado"> </span></h3>
             <h3>Categoria: <span id="categoria"> </span></h3>
-        </div> 
-        <main id="estatisticas">  
-        </main>
+           <h3>Participantes:
+           <table class="tab"> 
+            <thead class="td">
+
+                <tr><th>Nome</th>
+                <th>Apelido</th>
+                <th>Idade</th>
+                <th>Pontos</th>
+                <th>Presença</th>
+            </tr></thead>
+            <tbody id="estatisticas"> </tbody>
+         </table>
+            </h3>
+
+
+
+        </div>
         <a href="gesProfile.html">
             <input type="button" value="Terminado" onclick="terminar()" class="info-btn" />
         </a>

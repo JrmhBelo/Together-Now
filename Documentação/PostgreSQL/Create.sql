@@ -25,7 +25,7 @@ CREATE TABLE gestorEvento(
 	ges_nascimento date,
 	ges_idade int, --Deveriamos retirar a idade mas sim 
 	ges_organizacao varchar(30),
-	ges_genero char(1) --CHECK (ges_genero = 'M' OR ges_genero = 'F'),
+	ges_genero char(1), --CHECK (ges_genero = 'M' OR ges_genero = 'F'),
 	PRIMARY KEY (ges_ID)
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE evento(
 	eve_maxParticipantes int NOT NULL,
 	eve_lati float NOT NULL,
 	eve_lon float NOT NULL,
-	eve_estado varchar(20) DEFAULT 'Por iniciar',
+	eve_estado varchar(20) DEFAULT 'Criado',
 	eve_categ varchar(20),
 	ges_ID int,
 	PRIMARY KEY (eve_id),
@@ -73,7 +73,7 @@ CREATE TABLE participa (
 	PRIMARY KEY (eve_ID,uti_ID),
 	FOREIGN KEY (eve_ID) REFERENCES Evento (eve_ID),
 	FOREIGN KEY (uti_ID) REFERENCES Utilizador (uti_ID)
-)
+);
 
 
 create table cria(
@@ -83,7 +83,7 @@ create table cria(
 	PRIMARY KEY (ges_id,eve_id),
 	FOREIGN KEY (eve_id) REFERENCES Evento (eve_ID),
 	FOREIGN KEY (ges_id) REFERENCES gestorevento (ges_id)
-)
+);
 	
 ---------------------------------
 
@@ -101,7 +101,6 @@ add column reg_concelho varchar(50);
 
 ALTER TABLE evento
 ADD CONSTRAINT eve_maxparticipantes CHECK (eve_maxparticipantes >= 2);
-
 
 
 

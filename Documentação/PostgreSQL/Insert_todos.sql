@@ -49,28 +49,28 @@ INSERT INTO public.gestorevento(
 
 --------------
 INSERT INTO public.evento(
-	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ)
-	VALUES ('Recolha de alimentos', 'Evento solidário', 'Verdes Unidos', '2022-1-12', '2022-1-12', '09:00', '20:30', 'Pingo Doce Cascais-Villa, Shopping Center, Av. Dom Pedro I 1 2, 2750-042 Cascais', 6, 38.702683988493014, -9.419278139919834, 'Interior'); 
+	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ, ges_id )
+	VALUES ('Recolha de alimentos', 'Evento solidário', 'Verdes Unidos', '2022-1-12', '2022-1-12', '09:00', '20:30', 'Pingo Doce Cascais-Villa, Shopping Center, Av. Dom Pedro I 1 2, 2750-042 Cascais', 6, 38.702683988493014, -9.419278139919834, 'Interior',1); 
 
 INSERT INTO public.evento(
-	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ)
-	VALUES ('Recolha de bens alimentares', 'Evento solidário', 'Blue Clapper', '2022-1-4', '2022-1-4', '10:00', '20:30', 'Pingo Doce São João do Estoril, R. Egas Moniz 173, 2765-478 Estoril', 6, 38.70059010524026, -9.38040829850534, 'Interior'); 
+	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ, ges_id )
+	VALUES ('Recolha de bens alimentares', 'Evento solidário', 'Blue Clapper', '2022-1-4', '2022-1-4', '10:00', '20:30', 'Pingo Doce São João do Estoril, R. Egas Moniz 173, 2765-478 Estoril', 6, 38.70059010524026, -9.38040829850534, 'Interior',2); 
 
 INSERT INTO public.evento(
-	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ)
-	VALUES ('Recolha de alimentos', 'Evento solidário', 'Oceano Azul Foundation', '2022-1-5', '2022-1-5', '10:20', '19:30', 'Pingo Doce Parede - Avenida da República, Av. da República 75, 2775-275 Parede', 6, 38.69027331444375, -9.355123308925933, 'Interior'); 
+	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ, ges_id )
+	VALUES ('Recolha de alimentos', 'Evento solidário', 'Oceano Azul Foundation', '2022-1-5', '2022-1-5', '10:20', '19:30', 'Pingo Doce Parede - Avenida da República, Av. da República 75, 2775-275 Parede', 6, 38.69027331444375, -9.355123308925933, 'Interior',1); 
 
 INSERT INTO public.evento(
-	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ)
-	VALUES ('Recolha de alimentos', 'Evento solidário', 'Blue Clapper', '2022-1-6', '2022-1-6', '10:00', '20:30', 'Pingo Doce Estoril Amoreira, R. Dom Bosco Vale da Amoreira, 2765-294 Estoril', 6, 38.717033001901875, -9.405335785692868, 'Interior'); 
+	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ, ges_id )
+	VALUES ('Recolha de alimentos', 'Evento solidário', 'Blue Clapper', '2022-1-6', '2022-1-6', '10:00', '20:30', 'Pingo Doce Estoril Amoreira, R. Dom Bosco Vale da Amoreira, 2765-294 Estoril', 6, 38.717033001901875, -9.405335785692868, 'Interior',3); 
 
 INSERT INTO public.evento(
-	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ)
-	VALUES ('Limpeza da Praia de Carcavelos', 'Evento solidário', 'Oceano Azul Foundation', '2021-12-12', '2021-12-13', '14:00', '17:00', 'Wifi Cascais, Avenida Marginal, Junqueiro, Carcavelos e Parede, Cascais, Lisboa, 2775-629, Portugal', 20, 38.67975, -9.33635, 'Exterior');
+	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ, ges_id )
+	VALUES ('Limpeza da Praia de Carcavelos', 'Evento solidário', 'Oceano Azul Foundation', '2021-12-12', '2021-12-13', '14:00', '17:00', 'Wifi Cascais, Avenida Marginal, Junqueiro, Carcavelos e Parede, Cascais, Lisboa, 2775-629, Portugal', 20, 38.67975, -9.33635, 'Exterior',2);
 
 INSERT INTO public.evento(
-	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ)
-	VALUES ('Limpeza da Praia da Rainha', 'Evento solidário', 'Oceano Azul Foundation', '2021-12-19', '2021-12-19', '14:00', '17:00', 'Praia da Rainha - 10, Estrada Florestal da Fonte da Telha, Terras da Costa, Almada, Charneca de Caparica, Setúbal, 2825-494, Portugal', 30, 38.61676, -9.21711, 'Exterior');
+	eve_nome, eve_descricao, eve_beneficiario, eve_datai, eve_dataf, eve_horai, eve_horaf, eve_morada, eve_maxparticipantes, eve_lati, eve_lon, eve_categ, ges_id)
+	VALUES ('Limpeza da Praia da Rainha', 'Evento solidário', 'Oceano Azul Foundation', '2021-12-19', '2021-12-19', '14:00', '17:00', 'Praia da Rainha - 10, Estrada Florestal da Fonte da Telha, Terras da Costa, Almada, Charneca de Caparica, Setúbal, 2825-494, Portugal', 30, 38.61676, -9.21711, 'Exterior',1);
 
 --------------
 INSERT INTO public.regista(

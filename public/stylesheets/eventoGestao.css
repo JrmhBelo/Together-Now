@@ -45,6 +45,26 @@ header .navigation a:hover{
     margin-left:50px ;
 }
 
+/* ☻ */
+.content .tab{     
+  border-collapse: collapse;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #143d49;
+
+}
+
+.content .td {
+  border-collapse: collapse;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #143d49;
+}
+
+/* ☻ */
+
 .content .info h2{
     color: #226A80;
     font-size: 55px;
@@ -85,7 +105,8 @@ header .navigation a:hover{
     transition-property: background;
 
 }
-  
+
+
 .content .info-btn:hover{
     background: #0C4F60;
 }
