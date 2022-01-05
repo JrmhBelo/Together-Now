@@ -53,7 +53,7 @@ window.onload = async function () {
             var mymarker = L.marker([evento.eve_lati, evento.eve_lon],{icon: redIcon}).addTo(mymap).bindPopup(`<h4 onclick='showEvento(${evento.eve_id})'><u>${evento.eve_nome}</u>
                                                                                                             <br>${evento.eve_descricao}<br> Data de Inicio: ${formatDate(evento.eve_datai)}
                                                                                                             <br> Data de Fim: ${formatDate(evento.eve_dataf)}<br> Categoria: ${evento.eve_categ}</h4>`);
-            ~Exteriormarker.push(mymarker);
+            Exteriormarker.push(mymarker);
             eventos.push({evento: evento, marker: mymarker});
         }
     }
