@@ -38,7 +38,7 @@ header .navigation a:not(:last-child){
 }
 
 header .navigation a:hover{
-  background: rgb(46, 12, 12);
+  background: rgb(4, 79, 109);
 }
 
 #main {
@@ -72,7 +72,7 @@ html {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
+  background-color: #474a5d;
   color: white;
 }
 

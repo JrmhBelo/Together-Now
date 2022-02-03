@@ -38,7 +38,7 @@ header .navigation a:not(:last-child){
 }
 
 header .navigation a:hover{
-  background: #fff;
+  background: rgb(4, 79, 109);
 }
 
 .content{
