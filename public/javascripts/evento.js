@@ -9,7 +9,7 @@ window.onload = async function() {
             dataType: "json"
         });
         console.log(evento);
-
+                                //html tag              //DB table.column
         document.getElementById("nome").innerHTML = evento.eve_nome;
         document.getElementById("descricao").innerHTML = evento.eve_descricao;
         document.getElementById("dataI").innerHTML = formatDate(evento.eve_datai);

@@ -58,7 +58,7 @@ async function loadStats() {
     }
 }
 
-async function iniciar() {
+async function iniciar() { //put 
     let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
         eventoId,
@@ -78,7 +78,7 @@ async function iniciar() {
     }    
 }
 
-async function terminar() {
+async function terminar() { //put 
     let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
         eventoId,
@@ -98,7 +98,7 @@ async function terminar() {
     }    
 }
 
-async function cancelar() {
+async function cancelar() { //put 
     let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
         eventoId,
@@ -118,7 +118,7 @@ async function cancelar() {
     }    
 }
 
-async function adiar() {
+async function adiar() { //put 
     let eventoId = sessionStorage.getItem("eventoId");
     let obj = {
         eventoId,
