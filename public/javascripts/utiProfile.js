@@ -16,7 +16,9 @@ window.onload = async function() {
     } catch (err) {
         console.log(err);
         elem.innerHTML = `<h1> Please login to see your events </h1>
-                         <h2><a href="utiLogin.html"><img src="images/key.svg" class="logo"></a></h2>`;
+                         <div><h2><a href="utiLogin.html"><img src="images/key.svg" width="200" height="200" class="logo"></a></h2>
+                         <h1>↑ Here</h1>
+                         </div>`;
     }
 }
 function showEvento(id) {
