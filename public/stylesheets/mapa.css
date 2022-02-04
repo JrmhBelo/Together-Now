@@ -43,7 +43,7 @@ header .navigation a:hover{
 
 .grid-container {
   display: grid;
-  grid-template: auto / 50% 50%;
+  grid-template: auto / 30% 70%;
 }
 
 .item1{
@@ -69,7 +69,9 @@ header .navigation a:hover{
 
 main {
   display: grid;
-  grid-template: auto / auto auto;
+  /* grid-template: auto / auto auto; */
+  justify-items: center;
+  align-items: start;
 }
 main > section {
   margin: 10px; 
