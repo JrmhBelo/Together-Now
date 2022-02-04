@@ -6,7 +6,7 @@
     <title>TogetherNow</title>
     <link rel="stylesheet" href="./stylesheets/utiProfile.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./javascripts/utiProfile.js"></script>
+    <script src="./javascripts/utiLogin.js"></script> 
 </head>
       <body>
         <section>
@@ -23,10 +23,20 @@
           </header>
       </section>
         <main>
+            <div class="content">
+        <div class="info">
+            <h2>LOGIN<br><span></span></h2>
+        </div>
+        <main id="Login">
             <p> Email: <input type="email" id="email"></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
             <p> Password: <input type="password" id="pass"></p>
-            <p> <input type="button" onclick="login()" value="Login"></p>
             <p id="msg"></p>
+        </main>
+        <br>
+        <p> <input type="button" onclick="login()" value="Login"></p>
+    </div>
+            
         </main>
     </body>
 </html>
