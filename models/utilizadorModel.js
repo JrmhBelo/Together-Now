@@ -25,7 +25,7 @@ module.exports.getUtilizadorById = async function(id) {
     }
 }
 
-module.exports.loginUtilizador = async function(email,pass) { // NAO TEMOS
+module.exports.loginUtilizador = async function(email,pass) { // esta feito ☻
     try {
         let sql ="Select * from utilizador where uti_email = $1 and uti_pass = $2";
         let result = await pool.query(sql,[email,pass]);

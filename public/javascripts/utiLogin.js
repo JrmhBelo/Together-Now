@@ -1,4 +1,4 @@
-async function login() {    // Para implementar, aguas ☻
+async function login() {    // aguas ☻
     try {       
         let obj = {
             email: document.getElementById("email").value,
@@ -17,3 +17,18 @@ async function login() {    // Para implementar, aguas ☻
         document.getElementById("msg").innerText = err.responseJSON.msg;
     }
 }
+async function loadUser() {
+    try {
+      let html = "";
+      let id = sessionStorage.getItem("utiId");
+      let data = await $.ajax({
+        url: `api/utilizador/${id}`,
+        method: "get",
+        dataType: "json",
+      });
+      document.getElementById(
+        "utiId"
+      ).innerHTML = `<h1>${utilizador.uti_nomep}</h1>`;
+    } catch (error) {}
+}
+  

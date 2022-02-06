@@ -1,4 +1,5 @@
 window.onload = async function() {
+    loadUser();
     let elem = document.getElementById("eventosRegistado");
     try {
         let utiId = sessionStorage.getItem("utiId"); // ☻
@@ -23,5 +24,23 @@ window.onload = async function() {
 }
 function showEvento(id) {
     sessionStorage.setItem("eventoId",id);
+    
     window.location = "evento.html";
+}
+
+async function loadUti() {
+    try {
+      let html = "";
+      let id = sessionStorage.getItem("utiId");
+      let utilizador = await $.ajax({
+        url: `api/utilizador/${id}`,
+        method: "get",
+        dataType: "json",
+      });
+      document.getElementById(
+        "utiId"
+      ).innerHTML = `<h1>${utilizador.uti_id}</h1>`;
+    } catch (error) {
+        console.log(err);
+    }
 }
