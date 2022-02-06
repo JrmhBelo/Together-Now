@@ -17,7 +17,7 @@ async function login() {    // aguas ☻
         document.getElementById("msg").innerText = err.responseJSON.msg;
     }
 }
-async function loadUser() {
+async function loadUti() { // nada
     try {
       let html = "";
       let id = sessionStorage.getItem("utiId");

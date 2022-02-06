@@ -5,9 +5,11 @@ var greenIcon;
 var redIcon;
 var latPosition;
 var lonPosition;
+var routeControl;
 
 window.onload = async function () {
     getEventos();
+    getRota(1);
     getCurrentPosition();
     mymap = L.map('mapid').setView([38.707325418964764, -9.152454160542419], 11);
 
@@ -46,13 +48,15 @@ window.onload = async function () {
         if (evento.eve_lati && evento.eve_categ=='Interior') {
             var marker = L.marker([evento.eve_lati, evento.eve_lon],{icon: greenIcon}).addTo(mymap).bindPopup(`<h4 onclick='showEvento(${evento.eve_id})'><u>${evento.eve_nome}</u>
                                                                                                             <br>${evento.eve_descricao}<br> Data de Inicio: ${formatDate(evento.eve_datai)}
-                                                                                                            <br> Data de Fim: ${formatDate(evento.eve_dataf)}<br> Categoria: ${evento.eve_categ}</h4>`);
+                                                                                                            <br> Data de Fim: ${formatDate(evento.eve_dataf)}<br> Categoria: ${evento.eve_categ}</h4>`)
+                                                                                                            .on('click', onClickShowRoute);
             Interiormarker.push(marker);
             eventos.push({evento: evento, marker: marker});
         }else if(evento.eve_categ=='Exterior') {
             var mymarker = L.marker([evento.eve_lati, evento.eve_lon],{icon: redIcon}).addTo(mymap).bindPopup(`<h4 onclick='showEvento(${evento.eve_id})'><u>${evento.eve_nome}</u>
                                                                                                             <br>${evento.eve_descricao}<br> Data de Inicio: ${formatDate(evento.eve_datai)}
-                                                                                                            <br> Data de Fim: ${formatDate(evento.eve_dataf)}<br> Categoria: ${evento.eve_categ}</h4>`);
+                                                                                                            <br> Data de Fim: ${formatDate(evento.eve_dataf)}<br> Categoria: ${evento.eve_categ}</h4>`)
+                                                                                                            .on('click', onClickShowRoute);
             Exteriormarker.push(mymarker);
             eventos.push({evento: evento, marker: mymarker});
         }
@@ -192,4 +196,22 @@ function formatDate(date) {
 
     return [day, month, year].join('-');
 }
- 
+
+function onClickShowRoute(e) {
+
+    routeControl.setWaypoints([])
+
+    let latlng = this.getLatLng();
+
+    routeControl = L.Routing.control({
+        waypoints: [
+            L.latLng(latPosition, lonPosition),
+            L.latLng(latlng.lat, latlng.lng)
+    
+        ]
+        
+    }).addTo(mymap);
+    console.log(latPosition + lonPosition)
+    console.log(this.getLatLng)
+
+}
