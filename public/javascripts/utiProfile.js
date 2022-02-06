@@ -1,5 +1,8 @@
+var utiID = sessionStorage.getItem("utiId");
+
+
 window.onload = async function() {
-    loadUser();
+    console.log(utiID)
     let elem = document.getElementById("eventosRegistado");
     try {
         let utiId = sessionStorage.getItem("utiId"); // ☻
@@ -8,9 +11,19 @@ window.onload = async function() {
             method: "get",
             dataType: "json"
         });
+
+        let id = utiID;
+        let utilizador = await $.ajax({
+        url: "api/utilizador/"+id,
+        method: "get",
+        dataType: "json"
+      });
+      console.log(utilizador);
+      document.getElementById("utiId").innerHTML = `<h1>${utilizador.uti_nomep}</h1>`;
+
         let html = "";
         for (let evento of eventos) {
-            html += `<section onclick='showEvento(${evento.eve_id})'>
+            html +=` <section onclick='showEvento(${evento.eve_id})'>
                 ${evento.eve_nome}</section>`
         elem.innerHTML = html;
         }
@@ -18,29 +31,10 @@ window.onload = async function() {
         console.log(err);
         elem.innerHTML = `<h1> Please login to see your events </h1>
                          <div><h2><a href="utiLogin.html"><img src="images/key.svg" width="200" height="200" class="logo"></a></h2>
-                         <h1>↑ Here</h1>
-                         </div>`;
+                        </div>`;
     }
 }
 function showEvento(id) {
     sessionStorage.setItem("eventoId",id);
-    
     window.location = "evento.html";
-}
-
-async function loadUti() {
-    try {
-      let html = "";
-      let id = sessionStorage.getItem("utiId");
-      let utilizador = await $.ajax({
-        url: `api/utilizador/${id}`,
-        method: "get",
-        dataType: "json",
-      });
-      document.getElementById(
-        "utiId"
-      ).innerHTML = `<h1>${utilizador.uti_id}</h1>`;
-    } catch (error) {
-        console.log(err);
-    }
 }
