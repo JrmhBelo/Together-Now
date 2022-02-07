@@ -10,7 +10,7 @@ router.get('/', async function(req, res, next) {
 
 router.get('/:id/', async function(req, res, next) { // '/:id[0-9+]' ou '/:id/'
     let id = req.params.id;
-	console.log ("Enviando utilizador com id " + id); // conflito !!!
+	console.log ("Enviando utilizador com id " + id); 
     let result = await uModel.getUtilizadorById(id); 
     res.status(result.status).send(result.result);
 });

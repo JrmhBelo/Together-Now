@@ -1,34 +1,34 @@
-async function login() {    // aguas ☻
+async function loginGes() {    // aguas ☻
     try {       
         let obj = {
             email: document.getElementById("email").value,
             pass: document.getElementById("pass").value
         }
         let utilizador = await $.ajax({
-            url: '/api/utilizador/login',
+            url: '/api/gestor/login',
             method: 'post',
             dataType: 'json',
             data: JSON.stringify(obj),
             contentType: 'application/json'
         });
-        sessionStorage.setItem("utiId",utilizador.uti_id);
-        window.location = "utiProfile.html";
+        sessionStorage.setItem("gesId",gestorevento.ges_id);
+        window.location = "gesProfile.html";
     } catch (err) {
         document.getElementById("msg").innerText = err.responseJSON.msg;
     }
 }
-async function loadUti() { // esta ok 
+async function loadGes() { // nada
     try {
       let html = "";
-      let id = sessionStorage.getItem("utiId");
+      let id = sessionStorage.getItem("gesId");
       let data = await $.ajax({
-        url: `api/utilizador/${id}`,
+        url: `api/gestor/${id}`,
         method: "get",
         dataType: "json",
       });
       document.getElementById(
-        "utiId"
-      ).innerHTML = `<h1>${utilizador.uti_nomep}</h1>`;
+        "gesId"
+      ).innerHTML = `<h1>${gestorevento.ges_nomep}</h1>`;
     } catch (error) {}
 }
   
