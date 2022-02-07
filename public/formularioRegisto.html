@@ -1,125 +1,130 @@
 <!doctype html>
 <html>
 
-    <head>
-        <link rel="shortcut icon" , type = "image/PNG" , href = "images/Together Now LOGO.PNG">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Together Now </title>
-        <link rel="stylesheet" href="stylesheets/formularioRegisto.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-        <script src="javascripts/formularioRegisto.js"></script>
-    </head>
-    <body> 
-        <section>
-            <header>
-              <h2><a href="index.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
-              <div class="navigation">
+<head>
+    <link rel="shortcut icon" , type="image/PNG" , href="images/Together Now LOGO.PNG">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Together Now </title>
+    <link rel="stylesheet" href="stylesheets/formularioRegisto.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="javascripts/formularioRegisto.js"></script>
+</head>
+
+<body>
+    <section>
+        <header>
+            <h2><a href="index.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
+            <div class="navigation">
                 <a href="index.html">Home</a>
                 <a href="catalogoEventos.html">Catálogo de Eventos</a>
                 <a href="utiProfile.html">Perfil</a>
                 <a href="mapa.html">Mapa</a>
                 <a href="utiLogin.html">Login</a>
                 <a href="sobre.html">Sobre</a>
-              </div>
-            </header> 
+            </div>
+        </header>
         <div class="content">
             <div class="info">
                 <h2>Formulário de Participação <br><span>Complete as suas informações</span></h2>
             </div>
-        <form>
+            <form>
 
-            <fieldset class="grupo">
+                <fieldset class="grupo">
 
-                <div class="campo">
+                    <div class="campo">
+                        <br>
+                        <label for="cidade"><strong>Cidade: </strong></label>
+                        <select id="cidade">
+                            <option selected disabled value="">Selecione</option>
+                            <option value="Lisboa">Lisboa</option>
+                            <option value="Porto">Porto</option>
+                            <option value="Braga">Braga </option>
+                            <option value="Aveiro">Aveiro</option>
+                            <option value="Évora">Évora</option>
+                            <option value="Guimarães">Guimarães</option>
+                            <option value="Faro">Faro</option>
+                            <option value="Leiria">Leiria</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="concelho"><strong>Concelho: </strong></label>
+                        <input type="text" name="concelho" id="concelho"
+                            placeholder=" Insira o seu concelho (ex: Odivelas)" size="40">
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="Morada"><strong>Morada: </strong></label>
+                        <input type="text" name="morada" id="morada" placeholder=" Insira a sua morada (ex: Rua IADE)"
+                            size="40">
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="escivil"><strong>Estado Civil: </strong></label>
+                        <select id="escivil">
+                            <option selected disabled value="">Selecione</option>
+                            <option value="Solteiro">Solteiro/a</option>
+                            <option value="Divorciado">Divorciado/a</option>
+                            <option value="Viúvo">Viúvo/a</option>
+                            <option value="Casado">Casado/a</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="escolaridade"><strong>Escolaridade: </strong></label>
+                        <select id="escolaridade">
+                            <option selected disabled value="">Selecione</option>
+                            <option value="Ensino Básico">Ensino Básico</option>
+                            <option value="Ensino Secundário">Ensino Secundário</option>
+                            <option value="Ensino Superior">Ensino Superior</option>
+                            <option value="Licenciatura">Licenciatura</option>
+                            <option value="Mestrado">Mestrado</option>
+                            <option value="Doutoramento">Doutoramento</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="sitEmprego"><strong>Em que situação atual de emprego se encontra: </strong></label>
+                        <select id="sitEmprego">
+                            <option selected disabled value="">Selecione</option>
+                            <option value="Empregado">Empregado</option>
+                            <option value="Independente">Independente</option>
+                            <option value="Desempregado">Desempregado</option>
+                            <option value="Estudante">Estudante</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="profissao"><strong>Profissão: </strong></label>
+                        <input type="text" name="profissao" id="profissao"
+                            placeholder=" Insira a sua profissão (ex: Contabilista)" size="40">
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="motivacao"><strong>Motivo de Participação: </strong></label>
+                        <br>
+                        <textarea rows="6" style="width: 29em" id="motivacao" name="motivacao"
+                            placeholder=" Insira sua mensagem"></textarea>
+                    </div>
                     <br>
-                    <label for="cidade"><strong>Cidade: </strong></label>
-                    <select id="cidade">
-                      <option selected disabled value="">Selecione</option>
-                      <option value="Lisboa">Lisboa</option>
-                      <option value="Porto">Porto</option>
-                      <option value="Braga">Braga </option>
-                      <option value="Aveiro">Aveiro</option>
-                      <option value="Évora">Évora</option>
-                      <option value="Guimarães">Guimarães</option>
-                      <option value="Faro">Faro</option>
-                      <option value="Leiria">Leiria</option>
-                    </select>
-                </div>
-
-                <div class="campo">
+                </fieldset>
+                <a href="catalogoEventos.html">
+                    <input type="submit" value="Concluído" onclick="registar()" class="info-btn">
                     <br>
-                    <label for="concelho"><strong>Concelho: </strong></label>
-                    <input type="text" name="concelho" id="concelho" placeholder=" Insira o seu concelho (ex: Odivelas)" size="40">
-                </div>
-
-                <div class="campo">
-                    <br>
-                    <label for="Morada"><strong>Morada: </strong></label>
-                    <input type="text" name="morada" id="morada" placeholder=" Insira a sua morada (ex: Rua IADE)" size="40">
-                </div>
-
-                <div class="campo">
-                    <br>
-                    <label for="escivil"><strong>Estado Civil: </strong></label>
-                    <select id="escivil">
-                    <option selected disabled value="">Selecione</option>
-                    <option value="Solteiro">Solteiro/a</option>
-                    <option value="Divorciado">Divorciado/a</option>
-                    <option value="Viúvo">Viúvo/a</option>
-                    <option value="Casado">Casado/a</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <br>
-                    <label for="escolaridade"><strong>Escolaridade: </strong></label>
-                    <select id="escolaridade">
-                    <option selected disabled value="">Selecione</option>
-                    <option value="Ensino Básico">Ensino Básico</option>
-                    <option value="Ensino Secundário">Ensino Secundário</option>
-                    <option value="Ensino Superior">Ensino Superior</option>
-                    <option value="Licenciatura">Licenciatura</option>
-                    <option value="Mestrado">Mestrado</option>
-                    <option value="Doutoramento">Doutoramento</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <br>
-                    <label for="sitEmprego"><strong>Em que situação atual de emprego se encontra: </strong></label>
-                    <select id="sitEmprego">
-                    <option selected disabled value="">Selecione</option>
-                    <option value="Empregado">Empregado</option>
-                    <option value="Independente">Independente</option>
-                    <option value="Desempregado">Desempregado</option>
-                    <option value="Estudante">Estudante</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <br>
-                    <label for="profissao"><strong>Profissão: </strong></label>
-                    <input type="text" name="profissao" id="profissao" placeholder=" Insira a sua profissão (ex: Contabilista)" size="40">
-                </div>
-
-                <div class="campo">
-                    <br>
-                    <label for="motivacao"><strong>Motivo de Participação: </strong></label>
-                    <br>   
-                    <textarea rows="6" style="width: 29em" id="motivacao" name="motivacao" placeholder=" Insira sua mensagem"></textarea>
-                </div>
-                <br>
-            </fieldset>
-            <a href="catalogoEventos.html">
-                <input type="submit" value="Concluído" onclick="registar()" class="info-btn">
-                <br>
-            <a href="catalogoEventos.html">
-                <button type="button" value="Cancelar" class="info-btn">Cancelar</button> 
-            </a>
+                    <a href="catalogoEventos.html">
+                        <button type="button" value="Cancelar" class="info-btn">Cancelar</button>
+                    </a>
         </div>
-    </form>
-    </body>
+        </form>
+</body>
 
 </html>

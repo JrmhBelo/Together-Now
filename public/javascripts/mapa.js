@@ -197,17 +197,13 @@ function formatDate(date) {
     return [day, month, year].join('-');
 }
 
-function onClickShowRoute(e) {
-
+function onClickShowRoute() {
     routeControl.setWaypoints([])
-
     let latlng = this.getLatLng();
-
     routeControl = L.Routing.control({
         waypoints: [
             L.latLng(latPosition, lonPosition),
             L.latLng(latlng.lat, latlng.lng)
-    
         ]
         
     }).addTo(mymap);

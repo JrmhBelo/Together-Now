@@ -7,27 +7,24 @@
     <title>TogetherNow</title>
     <link rel="stylesheet" href="./stylesheets/utiProfile.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./javascripts/utiLogin.js"></script>
+    <script src="./javascripts/gesLogin.js"></script>
 </head>
 
 <body>
     <section>
         <header>
-            <h2><a href="index.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
+            <h2><a href="indexGes.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
             <div class="navigation">
-                <a href="index.html">Home</a>
-                <a href="catalogoEventos.html">Catálogo de Eventos</a>
-                <a href="utiProfile.html">Perfil</a>
-                <a href="mapa.html">Mapa</a>
-                <a href="utiLogin.html">Login</a>
-                <a href="sobre.html">Sobre</a>
+                <a href="indexGes.html">Home</a>
+                <a href="formularioEvento.html">Criação de Evento</a>
+                <a href="gesProfile.html">Perfil</a>
             </div>
         </header>
     </section>
     <main>
         <div class="content">
             <div class="info">
-                <h2>LOGIN<br><span></span></h2>
+                <h2>LOGIN GESTOR DE EVENTO<br><span></span></h2>
             </div>
             <main id="Login">
                 <p> Email: <input type="email" id="email"></p>
@@ -36,16 +33,10 @@
                 <p id="msg"></p>
             </main>
             <br>
-            <p> <input type="button" onclick="login()" value="Login"></p>
-            <p>
-                <a href="gesLogin.html">
-                    <button type="button" value="Anterior" class="info-btn">Ges LOGIN</button> 
-                    <!-- aqui login adm, mudar para gesLOGIN.html ☻ -->
-                </a>
-            </p> 
+            <p> <input type="button" onclick="loginGes()" value="Login"></p>
+            <!-- fazer loginGes()  -->
         </div>
         </div>
-
     </main>
 </body>
 
