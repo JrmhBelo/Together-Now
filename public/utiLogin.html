@@ -5,7 +5,7 @@
     <link rel="shortcut icon" , type="image/PNG" , href="images/Together Now LOGO.PNG">
     <meta charset="UTF-8">
     <title>TogetherNow</title>
-    <link rel="stylesheet" href="./stylesheets/utiProfile.css">
+    <link rel="stylesheet" href="./stylesheets/gesLogin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./javascripts/utiLogin.js"></script>
 </head>
@@ -23,31 +23,32 @@
                 <a href="sobre.html">Sobre</a>
             </div>
         </header>
-    </section>
-    <main>
-        <div class="content">
-            <div class="info">
-                <h2>LOGIN<br><span></span></h2>
+        <main>
+            <div class="content">
+                <div class="info">
+                    <h2>LOGIN<br><span></span></h2>
+                </div>
+                <main id="Login">
+                    <p> Email: <input type="email" id="email"></p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+                    <p> Password: <input type="password" id="pass"></p>
+                    <p id="msg"></p>
+                </main>
+                <br>
+                <p> <input type="button" onclick="login()" value="Login"></p>
+                <p>
+                    <br>
+                    <br>
+                    <a href="gesLogin.html">
+                        <button type="button" value="Anterior" class="info-btn">Ges LOGIN</button> 
+                        <!-- aqui login adm, mudar para gesLOGIN.html ☻ -->
+                    </a>
+                </p> 
             </div>
-            <main id="Login">
-                <p> Email: <input type="email" id="email"></p>
-                <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
-                <p> Password: <input type="password" id="pass"></p>
-                <p id="msg"></p>
-            </main>
-            <br>
-            <p> <input type="button" onclick="login()" value="Login"></p>
-            <p>
-                <a href="gesLogin.html">
-                    <button type="button" value="Anterior" class="info-btn">Ges LOGIN</button> 
-                    <!-- aqui login adm, mudar para gesLOGIN.html ☻ -->
-                </a>
-            </p> 
-        </div>
-        </div>
-
-    </main>
+            </div>
+    
+        </main>
+    </section>
 </body>
-
 </html>
 <!-- ☻ -->

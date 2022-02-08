@@ -5,7 +5,7 @@
     <link rel="shortcut icon" , type="image/PNG" , href="images/Together Now LOGO.PNG">
     <meta charset="UTF-8">
     <title>TogetherNow</title>
-    <link rel="stylesheet" href="./stylesheets/utiProfile.css">
+    <link rel="stylesheet" href="./stylesheets/gesLogin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./javascripts/gesLogin.js"></script>
 </head>
@@ -15,30 +15,33 @@
         <header>
             <h2><a href="indexGes.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
             <div class="navigation">
-                <a href="indexGes.html">Home</a>
+                <!-- <h2>PÁGINA DE GESTORES - LOGIN<br><span></span></h2> -->
+                <a href="utiLogin.html">Volta para Utilizador Login page</a>
+                <!-- 
                 <a href="formularioEvento.html">Criação de Evento</a>
-                <a href="gesProfile.html">Perfil</a>
+                <a href="gesProfile.html">Perfil</a> -->
             </div>
         </header>
-    </section>
-    <main>
-        <div class="content">
-            <div class="info">
-                <h2>GESTOR DE EVENTO - LOGIN<br><span></span></h2>
+        <main>
+            <div class="content">
+                <div class="info">
+                    <h2>GESTOR DE EVENTO <br><span></span></h2>
+                </div>
+                <main id="Login">
+                    <p> Email: <input type="email" id="email"></p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+                    <p> Password: <input type="password" id="pass"></p>
+                    <p id="msg"></p>
+                </main>
+                <br>
+                <p> <input type="button" onclick="loginGes()" value="Login"></p>
+                <!-- fazer loginGes()  -->
             </div>
-            <main id="Login">
-                <p> Email: <input type="email" id="email"></p>
-                <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
-                <p> Password: <input type="password" id="pass"></p>
-                <p id="msg"></p>
-            </main>
-            <br>
-            <p> <input type="button" onclick="loginGes()" value="Login"></p>
-            <!-- fazer loginGes()  -->
-        </div>
-        </div>
-    </main>
-</body>
+            </div>
+        </main>
+    </body>
+    </section>
+    
 
 </html>
 <!-- ☻ -->
