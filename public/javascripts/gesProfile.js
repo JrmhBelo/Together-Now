@@ -13,19 +13,20 @@ window.onload = async function() {
         });
 
         let id = gesID;
-        let gestor = await $.ajax({
+        let gestorevento = await $.ajax({
             url: "api/gestor/"+id,
             method: "get",
             dataType: "json"
           });
-          console.log(gestor);
+          console.log(gestorevento);
           document.getElementById("gesId").innerHTML = `<h1>${gestorevento.ges_nomep}</h1>`;
 
         let html ="";
-        for(let evento of eventos)
+        for(let evento of eventos){
             html += `<section onclick='showEvento(${evento.eve_id})'>
                 ${evento.eve_nome}</section>`
         elem.innerHTML = html;
+        }
     } catch(err) {
         console.log(err);
         elem.innerHTML = `<h1> Please login to see your events </h1>
