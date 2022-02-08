@@ -4,7 +4,7 @@ async function loginGes() {    // aguas ☻
             email: document.getElementById("email").value,
             pass: document.getElementById("pass").value
         }
-        let utilizador = await $.ajax({
+        let gestorevento = await $.ajax({
             url: '/api/gestor/login',
             method: 'post',
             dataType: 'json',
