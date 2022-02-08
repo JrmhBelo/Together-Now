@@ -7,19 +7,20 @@ window.onload = async function() {
     try {
         let gesId = sessionStorage.getItem("gesId");
         let eventos = await $.ajax({
-        url: "/api/eventos/"+gesId+"/gestor", //mudar 1 para gesId quando tiver login para gestor de eventos
+        url: "/api/eventos/"+gesId+"/gestor", 
         method: "get",
         dataType: "json"
         });
-
-        let id = gesID;
-        let gestorevento = await $.ajax({
-            url: "api/gestor/"+id,
-            method: "get",
-            dataType: "json"
-          });
+        //↓
+                let id = gesID;
+                let gestorevento = await $.ajax({
+                    url: "api/gestor/"+id,
+                    method: "get",
+                    dataType: "json"
+                });
+          //
           console.log(gestorevento);
-          document.getElementById("gesId").innerHTML = `<h1>${gestorevento.ges_nomep}</h1>`;
+          document.getElementById("gesId").innerHTML = `<h3>${gestorevento.ges_nomep} ${gestorevento.ges_nomeu}</h3>`;
 
         let html ="";
         for(let evento of eventos){
@@ -38,8 +39,3 @@ function showEvento(id) {
     sessionStorage.setItem("eventoId",id);
     window.location = "eventoGestao.html";
 }
-
-//problema na linha 22
-
-// ReferenceError: gestorevento is not defined
-//at window.onload (gesProfile.js:22:63)

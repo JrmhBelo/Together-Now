@@ -1,7 +1,21 @@
+var gesID;
+
 window.onload = async function () {
     getLocation([38.707325418964764, -9.152454160542419])
+    console.log(gesID)
+
+    try{
+        gesID = sessionStorage.getItem("gesId");
+        let gestorevento = await $.ajax({
+            url: "api/gestor/"+userId,
+            method: "get",
+            dataType: "json"
+          });
+        console.log(gestorevento);
+    }catch(err){
+        console.log(err);
+    }
     
-  
 }
 async function getLocation(coords) {
 
@@ -60,7 +74,8 @@ async function getCoordenadas(morada) {
   }
 
 async function criar() {
- 
+        alert("Evento criado")
+        gestorid = sessionStorage.getItem("gesId")
         let obj = {
             nomeId: document.getElementById("nome").value,
             beneficiarioId: document.getElementById("beneficiario").value,
@@ -73,20 +88,23 @@ async function criar() {
             maxPartId: document.getElementById("maxPart").value,
             latId: document.getElementById("latitude").textContent,
             lonId: document.getElementById("longitude").textContent,
-            //moradaId: document.getElementById("morada").value,
-            //gesId = sessionStorage.getItem("gesId");
+            moradaId: document.getElementById("morada").value,
+            gesID : gesID 
         };
         try {
-        let evento = await $.ajax({
-            url: "/api/eventos/",
-            method: 'post',
-            dataType: 'json',
-            data: JSON.stringify(obj),
-            contentType: 'application/json'
-        });
+            let evento = await $.ajax({
+                url: "/api/eventos/",
+                method: 'post',
+                dataType: 'json',
+                data: JSON.stringify(obj),
+                contentType: 'application/json'
+            });
+            
+
         console.log(evento);
         document.getElementById("Concluído").innerHTML =
             "Evento criado";
+        alert("Evento criado")
     } catch (err) {
         console.log(err);
     }    

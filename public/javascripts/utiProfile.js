@@ -19,7 +19,7 @@ window.onload = async function() {
         dataType: "json"
       });
       console.log(utilizador);
-      document.getElementById("utiId").innerHTML = `<h1>${utilizador.uti_nomep}</h1>`;
+      document.getElementById("utiId").innerHTML = `<h3>${utilizador.uti_nomep} ${utilizador.uti_nomeu}</h3>`;
 
         let html = "";
         for (let evento of eventos) {
