@@ -1,5 +1,5 @@
 var gesID;
-
+//NAO mexer ☻
 window.onload = async function () {
     getLocation([38.707325418964764, -9.152454160542419])
     console.log(gesID)
@@ -71,8 +71,8 @@ async function getCoordenadas(morada) {
           } catch(err) {
           console.log(err);
        }
-  }
-
+}
+//NAO mexer ☻
 async function criar() {
         alert("Evento criado")
         gestorid = sessionStorage.getItem("gesId")

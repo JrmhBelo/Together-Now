@@ -1,5 +1,24 @@
+var utiID;
+
+window.onload = async function () {
+    //console.log(utiID)
+    try{
+        utiID = sessionStorage.getItem("utiId");
+        let utilizador = await $.ajax({
+        url: "api/utilizador/"+utiID,
+        method: "get",
+        dataType: "json"
+      });
+      //console.log(utilizador)
+    }catch(err){
+        console.log(err);
+    }
+
+}
+
 async function registar() {
- 
+    alert("Registado no evento")
+    utilizadorid = sessionStorage.getItem("utiId")
     let obj = {
 
         cidadeId: document.getElementById("cidade").value,
@@ -11,7 +30,7 @@ async function registar() {
         profissaoId: document.getElementById("profissao").value,
         motivacaoId: document.getElementById("motivacao").value,
         eventoId: sessionStorage.getItem("eventoId"),
-        utiId: 1
+        utiId: utilizadorid
         //utiId: sessionStorage.getItem("utiId")
     
     };
@@ -26,7 +45,7 @@ async function registar() {
     console.log(registo);
     document.getElementById("Concluído").innerHTML =
         "Utilizador Registado";
-} catch (err) {
-    console.log(err);
-}    
+    } catch (err) {
+        console.log(err);
+    }    
 }
