@@ -38,3 +38,9 @@ function showEvento(id) {
     sessionStorage.setItem("eventoId",id);
     window.location = "evento.html";
 }
+
+async function logout() {
+    sessionStorage.removeItem("utiId");
+    window.location = "utiLogin.html";
+    console.log(sessionStorage.getItem("utiId"));
+}

@@ -17,18 +17,18 @@ async function loginGes() {    // aguas ☻
         document.getElementById("msg").innerText = err.responseJSON.msg;
     }
 }
-async function loadGes() { // nada
-    try {
-      let html = "";
-      let id = sessionStorage.getItem("gesId");
-      let data = await $.ajax({
-        url: `api/gestor/${id}`,
-        method: "get",
-        dataType: "json",
-      });
-      document.getElementById(
-        "gesId"
-      ).innerHTML = `<h1>${gestorevento.ges_nomep}</h1>`;
-    } catch (error) {}
-}
+// async function loadGes() { // nada
+//     try {
+//       let html = "";
+//       let id = sessionStorage.getItem("gesId");
+//       let data = await $.ajax({
+//         url: `api/gestor/${id}`,
+//         method: "get",
+//         dataType: "json",
+//       });
+//       document.getElementById(
+//         "gesId"
+//       ).innerHTML = `<h1>${gestorevento.ges_nomep}</h1>`;
+//     } catch (error) {}
+// }
   

@@ -50,7 +50,7 @@ header .navigation a:not(:last-child){
 }
 
 header .navigation a:hover{
-  background: rgb(213, 220, 224);
+  background: rgb(224, 213, 213);
 }
 
 .content{

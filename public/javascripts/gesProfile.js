@@ -39,3 +39,9 @@ function showEvento(id) {
     sessionStorage.setItem("eventoId",id);
     window.location = "eventoGestao.html";
 }
+
+async function logoutges() {
+    sessionStorage.removeItem("gesId");
+    window.location = "utiLogin.html";
+    console.log(sessionStorage.getItem("gesId"));
+}
