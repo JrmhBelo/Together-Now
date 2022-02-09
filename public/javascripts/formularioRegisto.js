@@ -9,7 +9,7 @@ window.onload = async function () {
         method: "get",
         dataType: "json"
       });
-      //console.log(utilizador)
+      console.log(utilizador)
     }catch(err){
         console.log(err);
     }

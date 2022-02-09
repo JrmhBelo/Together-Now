@@ -75,3 +75,17 @@ module.exports.getUtilizadorEstatisticas = async function(id) {
         return { status:500, result: err};
     }
 }
+
+//Feito
+module.exports.createUtilizador = async function (utilizador) {
+       try {
+      let sql =
+        "insert into utilizador(uti_nomep, uti_nomeu, uti_email, uti_pass, uti_telemovel, uti_genero) values($1,$2,$3,$4,$5,$6);";
+      let result = await pool.query(sql, [utilizador.nomepId, utilizador.nomeuId, utilizador.email, utilizador.pass, utilizador.telemovelId, utilizador.uti_generoId,
+      ]);
+      return { status: 200, result: result };
+    } catch (error) {
+      console.log(error);
+      return { status: 500, result: error };
+    }
+  };

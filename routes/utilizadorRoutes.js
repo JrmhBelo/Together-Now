@@ -36,4 +36,10 @@ router.get('/:id/estatisticas',async function(req, res, next) { // ☻
     res.status(result.status).send(result.result);
 });
 
+router.post("/", async function(req,res,next) { 
+    console.log("Creating new User");
+      let newUtilizador = req.body;
+      let result = await uModel.createUtilizador(newUtilizador); res.send(result); 
+}); // feito
+
 module.exports = router;

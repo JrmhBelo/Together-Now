@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="shortcut icon" , type="image/PNG" , href="images/Together Now LOGO.PNG">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Together Now </title>
+    <link rel="stylesheet" href="stylesheets/formularioRegisto.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="javascripts/signIn.js"></script>
+</head>
+
+<body>
+    <section>
+        <header>
+            <h2><a href="index.html"><img src="images/Together Now LOGO.PNG" class="logo"></a></h2>
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="catalogoEventos.html">Catálogo de Eventos</a>
+                <a href="utiProfile.html">Perfil</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="utiLogin.html">Login</a>
+                <a href="gesLogin.html">Gestor Login</a>
+            </div>
+        </header>
+        <div class="content">
+            <div class="info">
+                <h2>Junte-se ao TogetherNow<br><span>Complete as suas informações</span></h2>
+            </div>
+            <form>
+
+                <fieldset class="grupo">
+
+                    
+                    <div class="campo">
+                        <br>
+                        <label for="nomep"><strong>Primeiro Nome: </strong></label>
+                        <input type="text" name="nomep" id="nomep">
+                             <!-- placeholder=" Insira o seu concelho (ex: Odivelas)" size="40" -->
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="nomeu"><strong>Aplido: </strong></label>
+                        <input type="text" name="nomeu" id="nomeu">
+                         <!-- placeholder=" Insira a sua morada (ex: Rua IADE)"size="40"> -->
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="email"><strong>Email: </strong></label>
+                        <input type="text" name="email" id="email">
+                         <!-- placeholder=" Insira a sua morada (ex: Rua IADE)"size="40"> -->
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="pass"><strong>Password: </strong></label>
+                        <input type="password" name="pass" id="pass">
+                         <!-- placeholder=" Insira a sua morada (ex: Rua IADE)"size="40"> -->
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="telemovel"><strong>Telemovel: </strong></label>
+                        <input type="text" name="telemovel" id="telemovel">
+                         <!-- placeholder=" Insira a sua morada (ex: Rua IADE)"size="40"> -->
+                    </div>
+
+                    <div class="campo">
+                        <br>
+                        <label for="genero"><strong>genero: </strong></label>
+                        <select id="genero">
+                            <option selected disabled value="">Selecione</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                    </div>
+                    <br>
+                </fieldset>
+                <a href="utiLogin.html">
+                    <input type="submit" value="Concluído" onclick="signIn()" class="info-btn">
+                    <br>
+                    <a href="index.html">
+                        <button type="button" value="Cancelar" class="info-btn">Cancelar</button>
+                    </a>
+        </div>
+        </form>
+</body>
+
+</html>
